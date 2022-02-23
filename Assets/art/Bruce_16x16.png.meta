@@ -1,0 +1,2109 @@
+fileFormatVersion: 2
+guid: 8711e27bdf1830148a4db2fa4a51a90d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5503703270850014611
+    second: Bruce_16x16_0
+  - first:
+      213: 3564424306301874745
+    second: Bruce_16x16_1
+  - first:
+      213: -8284884477645747891
+    second: Bruce_16x16_2
+  - first:
+      213: 8536415954448874851
+    second: Bruce_16x16_3
+  - first:
+      213: 6912626571057632838
+    second: Bruce_16x16_4
+  - first:
+      213: -3887968946352444294
+    second: Bruce_16x16_5
+  - first:
+      213: 3765329639057639413
+    second: Bruce_16x16_6
+  - first:
+      213: 398206757905710456
+    second: Bruce_16x16_7
+  - first:
+      213: -5600847289169776515
+    second: Bruce_16x16_8
+  - first:
+      213: -3965736951959934801
+    second: Bruce_16x16_9
+  - first:
+      213: 7041602558242716786
+    second: Bruce_16x16_10
+  - first:
+      213: -8641185058104522991
+    second: Bruce_16x16_11
+  - first:
+      213: -5045813835368482993
+    second: Bruce_16x16_12
+  - first:
+      213: 5176681892131113149
+    second: Bruce_16x16_13
+  - first:
+      213: 1284934819339746968
+    second: Bruce_16x16_14
+  - first:
+      213: 3237719972796916420
+    second: Bruce_16x16_15
+  - first:
+      213: -6773409171375305966
+    second: Bruce_16x16_16
+  - first:
+      213: -1978449118853704908
+    second: Bruce_16x16_17
+  - first:
+      213: 7031875628460294319
+    second: Bruce_16x16_18
+  - first:
+      213: -5386344281864808402
+    second: Bruce_16x16_19
+  - first:
+      213: -6440822049177514923
+    second: Bruce_16x16_20
+  - first:
+      213: -7942153577572426131
+    second: Bruce_16x16_21
+  - first:
+      213: -4390746420084678193
+    second: Bruce_16x16_22
+  - first:
+      213: 3730937154078967156
+    second: Bruce_16x16_23
+  - first:
+      213: -2411296677934652797
+    second: Bruce_16x16_24
+  - first:
+      213: -8376581565896500817
+    second: Bruce_16x16_25
+  - first:
+      213: 7848537981242547561
+    second: Bruce_16x16_26
+  - first:
+      213: -7568467209843882218
+    second: Bruce_16x16_27
+  - first:
+      213: 1513786191101502487
+    second: Bruce_16x16_28
+  - first:
+      213: 2796676120979654240
+    second: Bruce_16x16_29
+  - first:
+      213: 1949789850857144380
+    second: Bruce_16x16_30
+  - first:
+      213: -7095548104123889202
+    second: Bruce_16x16_31
+  - first:
+      213: 2563607579672709839
+    second: Bruce_16x16_32
+  - first:
+      213: 2951455352373666748
+    second: Bruce_16x16_33
+  - first:
+      213: 2884648417237535866
+    second: Bruce_16x16_34
+  - first:
+      213: -2545458651862016119
+    second: Bruce_16x16_35
+  - first:
+      213: -6427856054069306540
+    second: Bruce_16x16_36
+  - first:
+      213: -6955534407735292464
+    second: Bruce_16x16_37
+  - first:
+      213: -102261905428525986
+    second: Bruce_16x16_38
+  - first:
+      213: 7079424097320569490
+    second: Bruce_16x16_39
+  - first:
+      213: 3251854469274633852
+    second: Bruce_16x16_40
+  - first:
+      213: 5966337109613077113
+    second: Bruce_16x16_41
+  - first:
+      213: 3582246787917970949
+    second: Bruce_16x16_42
+  - first:
+      213: -6878020745103844548
+    second: Bruce_16x16_43
+  - first:
+      213: -55968107502788835
+    second: Bruce_16x16_44
+  - first:
+      213: 8309758693052209316
+    second: Bruce_16x16_45
+  - first:
+      213: 1824693251264095718
+    second: Bruce_16x16_46
+  - first:
+      213: -8378869742374237331
+    second: Bruce_16x16_47
+  - first:
+      213: -9009550377245554221
+    second: Bruce_16x16_48
+  - first:
+      213: -6634748897261184961
+    second: Bruce_16x16_49
+  - first:
+      213: 191767048182863706
+    second: Bruce_16x16_50
+  - first:
+      213: 5713818772839661138
+    second: Bruce_16x16_51
+  - first:
+      213: 7655486522315971421
+    second: Bruce_16x16_52
+  - first:
+      213: -2756680275248947258
+    second: Bruce_16x16_53
+  - first:
+      213: -3466562994572206611
+    second: Bruce_16x16_54
+  - first:
+      213: 1292972803821268067
+    second: Bruce_16x16_55
+  - first:
+      213: -1253266250168089651
+    second: Bruce_16x16_56
+  - first:
+      213: 6009726789941474272
+    second: Bruce_16x16_57
+  - first:
+      213: -5100192017281753388
+    second: Bruce_16x16_58
+  - first:
+      213: 5244167859361120872
+    second: Bruce_16x16_59
+  - first:
+      213: 3193050920812088070
+    second: Bruce_16x16_60
+  - first:
+      213: -1350796817324296578
+    second: Bruce_16x16_61
+  - first:
+      213: -5137872336185844961
+    second: Bruce_16x16_62
+  - first:
+      213: 4858119762621838602
+    second: Bruce_16x16_63
+  - first:
+      213: -1709111212017497373
+    second: Bruce_16x16_64
+  - first:
+      213: -7408354344559621218
+    second: Bruce_16x16_65
+  - first:
+      213: -1987254285448475304
+    second: Bruce_16x16_66
+  - first:
+      213: -6043607879813979729
+    second: Bruce_16x16_67
+  - first:
+      213: 243274052349263678
+    second: Bruce_16x16_68
+  - first:
+      213: 5511626274652122227
+    second: Bruce_16x16_69
+  - first:
+      213: 4993342579086818008
+    second: Bruce_16x16_70
+  - first:
+      213: 867305947998471624
+    second: Bruce_16x16_71
+  - first:
+      213: 6507070176397895542
+    second: Bruce_16x16_72
+  - first:
+      213: 8891341191403878047
+    second: Bruce_16x16_73
+  - first:
+      213: 5441380326383223830
+    second: Bruce_16x16_74
+  - first:
+      213: -5480530530911220066
+    second: Bruce_16x16_75
+  - first:
+      213: 5245799827367802658
+    second: Bruce_16x16_76
+  - first:
+      213: 6211459786253983886
+    second: Bruce_16x16_77
+  - first:
+      213: 3370218315433869547
+    second: Bruce_16x16_78
+  - first:
+      213: 1418726017547480818
+    second: Bruce_16x16_79
+  - first:
+      213: -3280158025014218831
+    second: Bruce_16x16_80
+  - first:
+      213: 210517694162082647
+    second: Bruce_16x16_81
+  - first:
+      213: -8923973653503074107
+    second: Bruce_16x16_82
+  - first:
+      213: 6947611051913264950
+    second: Bruce_16x16_83
+  - first:
+      213: -7916061501664967219
+    second: Bruce_16x16_84
+  - first:
+      213: 4925721372107116160
+    second: Bruce_16x16_85
+  - first:
+      213: -7615608228739190235
+    second: Bruce_16x16_86
+  - first:
+      213: 2573138366269149842
+    second: Bruce_16x16_87
+  - first:
+      213: -7342273842109417924
+    second: Bruce_16x16_88
+  - first:
+      213: -8145997734192855479
+    second: Bruce_16x16_89
+  - first:
+      213: -3473623512009047454
+    second: Bruce_16x16_90
+  - first:
+      213: -1325324473546727128
+    second: Bruce_16x16_91
+  - first:
+      213: -2187953394692706281
+    second: Bruce_16x16_92
+  - first:
+      213: -6055603544371841605
+    second: Bruce_16x16_93
+  - first:
+      213: -2483566566132743779
+    second: Bruce_16x16_94
+  - first:
+      213: -3865450012831419545
+    second: Bruce_16x16_95
+  - first:
+      213: 3280867031171557613
+    second: Bruce_16x16_96
+  - first:
+      213: -4166114915683407932
+    second: Bruce_16x16_97
+  - first:
+      213: 329895719976484256
+    second: Bruce_16x16_98
+  - first:
+      213: 1244013440189812423
+    second: Bruce_16x16_99
+  - first:
+      213: 7674175855459941191
+    second: Bruce_16x16_100
+  - first:
+      213: -2041235841610407343
+    second: Bruce_16x16_101
+  - first:
+      213: 300285884317194318
+    second: Bruce_16x16_102
+  - first:
+      213: -6636936851127903935
+    second: Bruce_16x16_103
+  - first:
+      213: 2213613221513124930
+    second: Bruce_16x16_104
+  - first:
+      213: 124542446675983040
+    second: Bruce_16x16_105
+  - first:
+      213: 1240642345168856508
+    second: Bruce_16x16_106
+  - first:
+      213: 3072292019137584794
+    second: Bruce_16x16_107
+  - first:
+      213: 6067015974375420411
+    second: Bruce_16x16_108
+  - first:
+      213: 7883873211035279890
+    second: Bruce_16x16_109
+  - first:
+      213: 535110575001810801
+    second: Bruce_16x16_110
+  - first:
+      213: 8690913155725713800
+    second: Bruce_16x16_111
+  - first:
+      213: -8299388812712819334
+    second: Bruce_16x16_112
+  - first:
+      213: -7133887601144428962
+    second: Bruce_16x16_113
+  - first:
+      213: 7570399662482392687
+    second: Bruce_16x16_114
+  - first:
+      213: 2839809090877495023
+    second: Bruce_16x16_115
+  - first:
+      213: -1519317106735201167
+    second: Bruce_16x16_116
+  - first:
+      213: 8822397286022448120
+    second: Bruce_16x16_117
+  - first:
+      213: 330904955478479236
+    second: Bruce_16x16_118
+  - first:
+      213: 252261016985939812
+    second: Bruce_16x16_119
+  - first:
+      213: -4830515488448095213
+    second: Bruce_16x16_120
+  - first:
+      213: 1360500143098060974
+    second: Bruce_16x16_121
+  - first:
+      213: 7225161474264547252
+    second: Bruce_16x16_122
+  - first:
+      213: 1636173915168432505
+    second: Bruce_16x16_123
+  - first:
+      213: 4718750946060177837
+    second: Bruce_16x16_124
+  - first:
+      213: -8703879705333623391
+    second: Bruce_16x16_125
+  - first:
+      213: -5839213051800570648
+    second: Bruce_16x16_126
+  - first:
+      213: -5581415514951278779
+    second: Bruce_16x16_127
+  - first:
+      213: 692812760681217133
+    second: Bruce_16x16_128
+  - first:
+      213: -4739615784142787043
+    second: Bruce_16x16_129
+  - first:
+      213: -7216285061381314084
+    second: Bruce_16x16_130
+  - first:
+      213: 9211890984299153904
+    second: Bruce_16x16_131
+  - first:
+      213: -7313236377606262903
+    second: Bruce_16x16_132
+  - first:
+      213: 1477000537795708222
+    second: Bruce_16x16_133
+  - first:
+      213: 6318469030848012659
+    second: Bruce_16x16_134
+  - first:
+      213: 2760754454391901936
+    second: Bruce_16x16_135
+  - first:
+      213: 3497018296041406301
+    second: Bruce_16x16_136
+  - first:
+      213: 5357299243947522239
+    second: Bruce_16x16_137
+  - first:
+      213: -740114889028563367
+    second: Bruce_16x16_138
+  - first:
+      213: 4543708121139065130
+    second: Bruce_16x16_139
+  - first:
+      213: -5209820337031501778
+    second: Bruce_16x16_140
+  - first:
+      213: -596098856051981770
+    second: Bruce_16x16_141
+  - first:
+      213: 1275459083119196652
+    second: Bruce_16x16_142
+  - first:
+      213: 883986566017987522
+    second: Bruce_16x16_143
+  - first:
+      213: 7199221880816734799
+    second: Bruce_16x16_144
+  - first:
+      213: -2400774272567051885
+    second: Bruce_16x16_145
+  - first:
+      213: -8854104476189711021
+    second: Bruce_16x16_146
+  - first:
+      213: 3850316346734574331
+    second: Bruce_16x16_147
+  - first:
+      213: 3880476024559804811
+    second: Bruce_16x16_148
+  - first:
+      213: 2377488801893506901
+    second: Bruce_16x16_149
+  - first:
+      213: -9104086438671213547
+    second: Bruce_16x16_150
+  - first:
+      213: 2546273591089232904
+    second: Bruce_16x16_151
+  - first:
+      213: -5569426482231426757
+    second: Bruce_16x16_152
+  - first:
+      213: -432249477246360898
+    second: Bruce_16x16_153
+  - first:
+      213: -4151049469729729370
+    second: Bruce_16x16_154
+  - first:
+      213: -7998097595525213608
+    second: Bruce_16x16_155
+  - first:
+      213: -697361953173014881
+    second: Bruce_16x16_156
+  - first:
+      213: 5098459040135489573
+    second: Bruce_16x16_157
+  - first:
+      213: 7249319810456142630
+    second: Bruce_16x16_158
+  - first:
+      213: -4939407282422188815
+    second: Bruce_16x16_159
+  - first:
+      213: -9219028639923638443
+    second: Bruce_16x16_160
+  - first:
+      213: 8595031667711923983
+    second: Bruce_16x16_161
+  - first:
+      213: -6951939757003857476
+    second: Bruce_16x16_162
+  - first:
+      213: 973398451103009282
+    second: Bruce_16x16_163
+  - first:
+      213: -8005562089428095503
+    second: Bruce_16x16_164
+  - first:
+      213: -9120008091449299499
+    second: Bruce_16x16_165
+  - first:
+      213: -3086005584936414252
+    second: Bruce_16x16_166
+  - first:
+      213: 3113455361659803468
+    second: Bruce_16x16_167
+  - first:
+      213: 4214288458136485777
+    second: Bruce_16x16_168
+  - first:
+      213: -7858386781103242446
+    second: Bruce_16x16_169
+  - first:
+      213: -4437175016384269464
+    second: Bruce_16x16_170
+  - first:
+      213: 329839301927772796
+    second: Bruce_16x16_171
+  - first:
+      213: 4656932856726022426
+    second: Bruce_16x16_172
+  - first:
+      213: 7259534546321758723
+    second: Bruce_16x16_173
+  - first:
+      213: 8174308660556385770
+    second: Bruce_16x16_174
+  - first:
+      213: 8564710286877348078
+    second: Bruce_16x16_175
+  - first:
+      213: -5371154690230510310
+    second: Bruce_16x16_176
+  - first:
+      213: -3772433173583219940
+    second: Bruce_16x16_177
+  - first:
+      213: -8530011826393641091
+    second: Bruce_16x16_178
+  - first:
+      213: -2714547370014842579
+    second: Bruce_16x16_179
+  - first:
+      213: 7459446230643093046
+    second: Bruce_16x16_180
+  - first:
+      213: 1406404016885207654
+    second: Bruce_16x16_181
+  - first:
+      213: 2973268496763990496
+    second: Bruce_16x16_182
+  - first:
+      213: -5374408971093034312
+    second: Bruce_16x16_183
+  - first:
+      213: -214667156208622353
+    second: Bruce_16x16_184
+  - first:
+      213: 1713860239348489379
+    second: Bruce_16x16_185
+  - first:
+      213: 6333084121410497051
+    second: Bruce_16x16_186
+  - first:
+      213: -8689603406401774959
+    second: Bruce_16x16_187
+  - first:
+      213: -260621273273521249
+    second: Bruce_16x16_188
+  - first:
+      213: -2016346339886005106
+    second: Bruce_16x16_189
+  - first:
+      213: -4980341249487643970
+    second: Bruce_16x16_190
+  - first:
+      213: 4961319202182841324
+    second: Bruce_16x16_191
+  - first:
+      213: 3945144537461342248
+    second: Bruce_16x16_192
+  - first:
+      213: 6760518728278283733
+    second: Bruce_16x16_193
+  - first:
+      213: 1119469655964618532
+    second: Bruce_16x16_194
+  - first:
+      213: 7896987052789840435
+    second: Bruce_16x16_195
+  - first:
+      213: 4571287703755974100
+    second: Bruce_16x16_196
+  - first:
+      213: 8167312857834029715
+    second: Bruce_16x16_197
+  - first:
+      213: -8975277420834519913
+    second: Bruce_16x16_198
+  - first:
+      213: -321846758928321437
+    second: Bruce_16x16_199
+  - first:
+      213: -9102018292312160252
+    second: Bruce_16x16_200
+  - first:
+      213: 5947805058397341955
+    second: Bruce_16x16_201
+  - first:
+      213: 2106058620958101486
+    second: Bruce_16x16_202
+  - first:
+      213: 4834734817299439391
+    second: Bruce_16x16_203
+  - first:
+      213: -1745728425444676637
+    second: Bruce_16x16_204
+  - first:
+      213: -3981017485272407476
+    second: Bruce_16x16_205
+  - first:
+      213: 4043957815067315442
+    second: Bruce_16x16_206
+  - first:
+      213: 1867595224810358651
+    second: Bruce_16x16_207
+  - first:
+      213: 2317909615820968588
+    second: Bruce_16x16_208
+  - first:
+      213: 7350278233643055152
+    second: Bruce_16x16_209
+  - first:
+      213: 4955783863618150191
+    second: Bruce_16x16_210
+  - first:
+      213: -5475182647773249990
+    second: Bruce_16x16_211
+  - first:
+      213: -127481935483715562
+    second: Bruce_16x16_212
+  - first:
+      213: -6047478989654461154
+    second: Bruce_16x16_213
+  - first:
+      213: -4237075627343543566
+    second: Bruce_16x16_214
+  - first:
+      213: 7751318673136255233
+    second: Bruce_16x16_215
+  - first:
+      213: -7166731122156933873
+    second: Bruce_16x16_216
+  - first:
+      213: 712825546981099145
+    second: Bruce_16x16_217
+  - first:
+      213: -1481856003658901161
+    second: Bruce_16x16_218
+  - first:
+      213: -2035987398089444295
+    second: Bruce_16x16_219
+  - first:
+      213: -7754152856710267737
+    second: Bruce_16x16_220
+  - first:
+      213: -1353694070786002417
+    second: Bruce_16x16_221
+  - first:
+      213: 6823413260312463804
+    second: Bruce_16x16_222
+  - first:
+      213: -4773935103788431550
+    second: Bruce_16x16_223
+  - first:
+      213: 4533887135791330630
+    second: Bruce_16x16_224
+  - first:
+      213: -2033598562760236507
+    second: Bruce_16x16_225
+  - first:
+      213: -8184311117134351216
+    second: Bruce_16x16_226
+  - first:
+      213: 5742290157247716181
+    second: Bruce_16x16_227
+  - first:
+      213: 2750804092430263169
+    second: Bruce_16x16_228
+  - first:
+      213: 4637742169590379064
+    second: Bruce_16x16_229
+  - first:
+      213: 4780672172622140093
+    second: Bruce_16x16_230
+  - first:
+      213: -3055189507812625435
+    second: Bruce_16x16_231
+  - first:
+      213: -858111873831737502
+    second: Bruce_16x16_232
+  - first:
+      213: 2243613222926766995
+    second: Bruce_16x16_233
+  - first:
+      213: 8674923935928437863
+    second: Bruce_16x16_234
+  - first:
+      213: -7056296456325451834
+    second: Bruce_16x16_235
+  - first:
+      213: 7472234275050951413
+    second: Bruce_16x16_236
+  - first:
+      213: 5321162608073228980
+    second: Bruce_16x16_237
+  - first:
+      213: 4658896650820339586
+    second: Bruce_16x16_238
+  - first:
+      213: -7287310375829543840
+    second: Bruce_16x16_239
+  - first:
+      213: -630794872067139643
+    second: Bruce_16x16_240
+  - first:
+      213: -2302441015353612680
+    second: Bruce_16x16_241
+  - first:
+      213: 1658328815608074840
+    second: Bruce_16x16_242
+  - first:
+      213: -1624207598659254752
+    second: Bruce_16x16_243
+  - first:
+      213: -8918431020918703285
+    second: Bruce_16x16_244
+  - first:
+      213: 6536536116084564017
+    second: Bruce_16x16_245
+  - first:
+      213: -7789171539813350725
+    second: Bruce_16x16_246
+  - first:
+      213: -1397341853787947529
+    second: Bruce_16x16_247
+  - first:
+      213: 1656568994323178490
+    second: Bruce_16x16_248
+  - first:
+      213: -8440270801558428888
+    second: Bruce_16x16_249
+  - first:
+      213: -2695045153116392912
+    second: Bruce_16x16_250
+  - first:
+      213: -8510940810452589901
+    second: Bruce_16x16_251
+  - first:
+      213: -5413352853088765625
+    second: Bruce_16x16_252
+  - first:
+      213: 7717995107587100401
+    second: Bruce_16x16_253
+  - first:
+      213: -5727970269961642344
+    second: Bruce_16x16_254
+  - first:
+      213: 5920388905935124408
+    second: Bruce_16x16_255
+  - first:
+      213: -3438036927571613669
+    second: Bruce_16x16_256
+  - first:
+      213: 5090860878797907924
+    second: Bruce_16x16_257
+  - first:
+      213: -3611172140465780125
+    second: Bruce_16x16_258
+  - first:
+      213: -6735915467442539539
+    second: Bruce_16x16_259
+  - first:
+      213: 3707938151823126397
+    second: Bruce_16x16_260
+  - first:
+      213: -6942732467204656645
+    second: Bruce_16x16_261
+  - first:
+      213: -794825183835420451
+    second: Bruce_16x16_262
+  - first:
+      213: -5205261453149014617
+    second: Bruce_16x16_263
+  - first:
+      213: 396116172511169157
+    second: Bruce_16x16_264
+  - first:
+      213: -4009487026834715222
+    second: Bruce_16x16_265
+  - first:
+      213: -8741544295436114691
+    second: Bruce_16x16_266
+  - first:
+      213: 7150565462283238614
+    second: Bruce_16x16_267
+  - first:
+      213: -6068492758786529999
+    second: Bruce_16x16_268
+  - first:
+      213: -4645329864556564331
+    second: Bruce_16x16_269
+  - first:
+      213: -6600915568300825972
+    second: Bruce_16x16_270
+  - first:
+      213: 5916861677867841879
+    second: Bruce_16x16_271
+  - first:
+      213: 2605112910387036103
+    second: Bruce_16x16_272
+  - first:
+      213: 326007457647527643
+    second: Bruce_16x16_273
+  - first:
+      213: 3180711286845842557
+    second: Bruce_16x16_274
+  - first:
+      213: -5920708264380418136
+    second: Bruce_16x16_275
+  - first:
+      213: 3700135551407843712
+    second: Bruce_16x16_276
+  - first:
+      213: 8886827720065642354
+    second: Bruce_16x16_277
+  - first:
+      213: 1356097272193640139
+    second: Bruce_16x16_278
+  - first:
+      213: -6019699115881572415
+    second: Bruce_16x16_279
+  - first:
+      213: 5705964945923215390
+    second: Bruce_16x16_280
+  - first:
+      213: -4024432761783850527
+    second: Bruce_16x16_281
+  - first:
+      213: 1255984528498749642
+    second: Bruce_16x16_282
+  - first:
+      213: -9051825153234914434
+    second: Bruce_16x16_283
+  - first:
+      213: 3886431916123347098
+    second: Bruce_16x16_284
+  - first:
+      213: 2182321090674888766
+    second: Bruce_16x16_285
+  - first:
+      213: -287222879617021781
+    second: Bruce_16x16_286
+  - first:
+      213: 6282746190134795777
+    second: Bruce_16x16_287
+  - first:
+      213: 3924929679310226980
+    second: Bruce_16x16_288
+  - first:
+      213: 6243389869285237975
+    second: Bruce_16x16_289
+  - first:
+      213: -4551193122296496833
+    second: Bruce_16x16_290
+  - first:
+      213: -3448653992516324408
+    second: Bruce_16x16_291
+  - first:
+      213: 969329799672786403
+    second: Bruce_16x16_292
+  - first:
+      213: 7583633133740174355
+    second: Bruce_16x16_293
+  - first:
+      213: 5531351109746363110
+    second: Bruce_16x16_294
+  - first:
+      213: -5199168962458117621
+    second: Bruce_16x16_295
+  - first:
+      213: -4224649865127688230
+    second: Bruce_16x16_296
+  - first:
+      213: -6104624023402461156
+    second: Bruce_16x16_297
+  - first:
+      213: 7643525013680560187
+    second: Bruce_16x16_298
+  - first:
+      213: 4431698924518618761
+    second: Bruce_16x16_299
+  - first:
+      213: -7097121398829384658
+    second: Bruce_16x16_300
+  - first:
+      213: -5166163302998495802
+    second: Bruce_16x16_301
+  - first:
+      213: -4119041585675696224
+    second: Bruce_16x16_302
+  - first:
+      213: -3753838711503688457
+    second: Bruce_16x16_303
+  - first:
+      213: -379723833621655488
+    second: Bruce_16x16_304
+  - first:
+      213: -563045104287852470
+    second: Bruce_16x16_305
+  - first:
+      213: 839149021508604305
+    second: Bruce_16x16_306
+  - first:
+      213: -1100332655511142743
+    second: Bruce_16x16_307
+  - first:
+      213: 7102493787409542163
+    second: Bruce_16x16_308
+  - first:
+      213: -6667045129016063272
+    second: Bruce_16x16_309
+  - first:
+      213: -6441374793597667712
+    second: Bruce_16x16_310
+  - first:
+      213: 2605504935204418131
+    second: Bruce_16x16_311
+  - first:
+      213: -2336165137812507199
+    second: Bruce_16x16_312
+  - first:
+      213: -8745749655426508353
+    second: Bruce_16x16_313
+  - first:
+      213: -5587485752193785642
+    second: Bruce_16x16_314
+  - first:
+      213: 1488844791104796997
+    second: Bruce_16x16_315
+  - first:
+      213: 6973652606741101116
+    second: Bruce_16x16_316
+  - first:
+      213: -6728591475014715764
+    second: Bruce_16x16_317
+  - first:
+      213: 6194302425076294500
+    second: Bruce_16x16_318
+  - first:
+      213: 5953669007279381624
+    second: Bruce_16x16_319
+  - first:
+      213: -1178123459942320740
+    second: Bruce_16x16_320
+  - first:
+      213: 1981814900945818624
+    second: Bruce_16x16_321
+  - first:
+      213: 6009090411212547072
+    second: Bruce_16x16_322
+  - first:
+      213: -2295331577168243472
+    second: Bruce_16x16_323
+  - first:
+      213: 2219769138116973990
+    second: Bruce_16x16_324
+  - first:
+      213: 4244650945995109147
+    second: Bruce_16x16_325
+  - first:
+      213: -1696484094881236479
+    second: Bruce_16x16_326
+  - first:
+      213: 343949936300836766
+    second: Bruce_16x16_327
+  - first:
+      213: -2416886005218932888
+    second: Bruce_16x16_328
+  - first:
+      213: 8748680121028136959
+    second: Bruce_16x16_329
+  - first:
+      213: -8419369229716593182
+    second: Bruce_16x16_330
+  - first:
+      213: -8473125409049456187
+    second: Bruce_16x16_331
+  - first:
+      213: -6554022823764257929
+    second: Bruce_16x16_332
+  - first:
+      213: 1327089610991763314
+    second: Bruce_16x16_333
+  - first:
+      213: 1258085915473336714
+    second: Bruce_16x16_334
+  - first:
+      213: 4748554033950803475
+    second: Bruce_16x16_335
+  - first:
+      213: 3678650683669733085
+    second: Bruce_16x16_336
+  - first:
+      213: -5856095051256360621
+    second: Bruce_16x16_337
+  - first:
+      213: -107649389687153073
+    second: Bruce_16x16_338
+  - first:
+      213: -3914568529342958046
+    second: Bruce_16x16_339
+  - first:
+      213: -8552320425568616576
+    second: Bruce_16x16_340
+  - first:
+      213: -8489267806830525384
+    second: Bruce_16x16_341
+  - first:
+      213: -2906438158782653802
+    second: Bruce_16x16_342
+  - first:
+      213: -6307671000047763986
+    second: Bruce_16x16_343
+  - first:
+      213: 3466306894710608651
+    second: Bruce_16x16_344
+  - first:
+      213: 8402986615313119992
+    second: Bruce_16x16_345
+  - first:
+      213: -7057732348588199057
+    second: Bruce_16x16_346
+  - first:
+      213: -6885179923014810736
+    second: Bruce_16x16_347
+  - first:
+      213: 4610426806142240831
+    second: Bruce_16x16_348
+  - first:
+      213: -1415353127147344035
+    second: Bruce_16x16_349
+  - first:
+      213: 8304169586600178836
+    second: Bruce_16x16_350
+  - first:
+      213: -185376033281156133
+    second: Bruce_16x16_351
+  - first:
+      213: -9094759141114776061
+    second: Bruce_16x16_352
+  - first:
+      213: -238139088736437341
+    second: Bruce_16x16_353
+  - first:
+      213: -3784042957152572025
+    second: Bruce_16x16_354
+  - first:
+      213: 1140249866523303276
+    second: Bruce_16x16_355
+  - first:
+      213: 9165297713070494005
+    second: Bruce_16x16_356
+  - first:
+      213: 312585031176694982
+    second: Bruce_16x16_357
+  - first:
+      213: -5914194956325846004
+    second: Bruce_16x16_358
+  - first:
+      213: -1917767802321114499
+    second: Bruce_16x16_359
+  - first:
+      213: -6408050994099946350
+    second: Bruce_16x16_360
+  - first:
+      213: -7996843353393048002
+    second: Bruce_16x16_361
+  - first:
+      213: -8530277893830183955
+    second: Bruce_16x16_362
+  - first:
+      213: 6563845822220385586
+    second: Bruce_16x16_363
+  - first:
+      213: 6014789368614409911
+    second: Bruce_16x16_364
+  - first:
+      213: 4999791021437912658
+    second: Bruce_16x16_365
+  - first:
+      213: -7170080156105595148
+    second: Bruce_16x16_366
+  - first:
+      213: -4162358337968061958
+    second: Bruce_16x16_367
+  - first:
+      213: -1715876536719285716
+    second: Bruce_16x16_368
+  - first:
+      213: 7985825638321597631
+    second: Bruce_16x16_369
+  - first:
+      213: -539419827564130343
+    second: Bruce_16x16_370
+  - first:
+      213: -1173758231961852611
+    second: Bruce_16x16_371
+  - first:
+      213: -2520098163009236165
+    second: Bruce_16x16_372
+  - first:
+      213: 7590513600955806872
+    second: Bruce_16x16_373
+  - first:
+      213: -7673811031281209457
+    second: Bruce_16x16_374
+  - first:
+      213: -3457770879117411695
+    second: Bruce_16x16_375
+  - first:
+      213: -1384254423895588698
+    second: Bruce_16x16_376
+  - first:
+      213: 3495444634818262624
+    second: Bruce_16x16_377
+  - first:
+      213: 8061030466277475290
+    second: Bruce_16x16_378
+  - first:
+      213: -2107610555314111696
+    second: Bruce_16x16_379
+  - first:
+      213: -837792218078182250
+    second: Bruce_16x16_380
+  - first:
+      213: -4961971692433303248
+    second: Bruce_16x16_381
+  - first:
+      213: 231122810119554640
+    second: Bruce_16x16_382
+  - first:
+      213: 312458259555862263
+    second: Bruce_16x16_383
+  - first:
+      213: -3462502980519486299
+    second: Bruce_16x16_384
+  - first:
+      213: -4368381222737238909
+    second: Bruce_16x16_385
+  - first:
+      213: 3016874378326435804
+    second: Bruce_16x16_386
+  - first:
+      213: -8071485652250460172
+    second: Bruce_16x16_387
+  - first:
+      213: 1957529735749523110
+    second: Bruce_16x16_388
+  - first:
+      213: -254571896462393236
+    second: Bruce_16x16_389
+  - first:
+      213: -7952199152624760047
+    second: Bruce_16x16_390
+  - first:
+      213: -8777092582931466019
+    second: Bruce_16x16_391
+  - first:
+      213: -4973110856616968549
+    second: Bruce_16x16_392
+  - first:
+      213: 1828130284439089073
+    second: Bruce_16x16_393
+  - first:
+      213: 3056660748940863279
+    second: Bruce_16x16_394
+  - first:
+      213: -3360415150542815993
+    second: Bruce_16x16_395
+  - first:
+      213: 4789091744532867218
+    second: Bruce_16x16_396
+  - first:
+      213: -2233021345532795805
+    second: Bruce_16x16_397
+  - first:
+      213: 1834170642621322669
+    second: Bruce_16x16_398
+  - first:
+      213: 8143955315778556399
+    second: Bruce_16x16_399
+  - first:
+      213: 7459703708356679690
+    second: Bruce_16x16_400
+  - first:
+      213: -8386743889297073107
+    second: Bruce_16x16_401
+  - first:
+      213: -1387751903100258190
+    second: Bruce_16x16_402
+  - first:
+      213: -6481446344633940670
+    second: Bruce_16x16_403
+  - first:
+      213: 3723817075470988421
+    second: Bruce_16x16_404
+  - first:
+      213: -7546172771170520590
+    second: Bruce_16x16_405
+  - first:
+      213: -7078543148661738538
+    second: Bruce_16x16_406
+  - first:
+      213: -6878511067322176870
+    second: Bruce_16x16_407
+  - first:
+      213: 8385385984873000865
+    second: Bruce_16x16_408
+  - first:
+      213: 95674070738693117
+    second: Bruce_16x16_409
+  - first:
+      213: -5868648511869582991
+    second: Bruce_16x16_410
+  - first:
+      213: 2370821135361039096
+    second: Bruce_16x16_411
+  - first:
+      213: 520192197556184233
+    second: Bruce_16x16_412
+  - first:
+      213: -5997427435554981903
+    second: Bruce_16x16_413
+  - first:
+      213: -8804625003643324946
+    second: Bruce_16x16_414
+  - first:
+      213: -5099518426152961531
+    second: Bruce_16x16_415
+  - first:
+      213: -3504973799356709426
+    second: Bruce_16x16_416
+  - first:
+      213: 3891780577809575904
+    second: Bruce_16x16_417
+  - first:
+      213: 944730420148036120
+    second: Bruce_16x16_418
+  - first:
+      213: -9032934956067784503
+    second: Bruce_16x16_419
+  - first:
+      213: -5869589975437819172
+    second: Bruce_16x16_420
+  - first:
+      213: 1526486578155586163
+    second: Bruce_16x16_421
+  - first:
+      213: -7580311342076121715
+    second: Bruce_16x16_422
+  - first:
+      213: -8572619688323991986
+    second: Bruce_16x16_423
+  - first:
+      213: -7281657616401410874
+    second: Bruce_16x16_424
+  - first:
+      213: 8526672685071611133
+    second: Bruce_16x16_425
+  - first:
+      213: -3245496976284457600
+    second: Bruce_16x16_426
+  - first:
+      213: 6694444961017451365
+    second: Bruce_16x16_427
+  - first:
+      213: 1302194818911557138
+    second: Bruce_16x16_428
+  - first:
+      213: -5328716524290586622
+    second: Bruce_16x16_429
+  - first:
+      213: 5078298270528447665
+    second: Bruce_16x16_430
+  - first:
+      213: -9166494733801718109
+    second: Bruce_16x16_431
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bruce_16x16_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 256
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 208
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_4
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 192
+        width: 175
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 192
+        width: 127
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_7
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 135
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 135
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 97
+        width: 63
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_11
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_12
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_13
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 135
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_15
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 135
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_16
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_17
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 135
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 97
+        width: 126
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 144
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 288
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_21
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_22
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_23
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_24
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_25
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_26
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1
+        width: 111
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_27
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1
+        width: 112
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_28
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 0
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_29
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_30
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_31
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 0
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bruce_16x16_32
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ec508a3b7e4e88d4c9dbd8e0bcd1524a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

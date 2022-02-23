@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: b82464b59ff0faf458defaa121397a24
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1725563371530441909
+    second: unreal3_0
+  - first:
+      213: 7878998516854970354
+    second: unreal3_1
+  - first:
+      213: 7865696460358991863
+    second: unreal3_2
+  - first:
+      213: 7565026442413354398
+    second: unreal3_3
+  - first:
+      213: 1042325489083601907
+    second: unreal3_4
+  - first:
+      213: 119645132028649195
+    second: unreal3_5
+  - first:
+      213: 2602984503285098921
+    second: unreal3_6
+  - first:
+      213: 1281317092730356161
+    second: unreal3_7
+  - first:
+      213: -2205894622659014947
+    second: unreal3_8
+  - first:
+      213: -1096498798462173882
+    second: unreal3_9
+  - first:
+      213: 180545319685951726
+    second: unreal3_10
+  - first:
+      213: 8188186431852679609
+    second: unreal3_11
+  - first:
+      213: 4408011975057477712
+    second: unreal3_12
+  - first:
+      213: -4858139408673686098
+    second: unreal3_13
+  - first:
+      213: 873279423835445449
+    second: unreal3_14
+  - first:
+      213: 7473066765160622094
+    second: unreal3_15
+  - first:
+      213: 133055866506448361
+    second: unreal3_16
+  - first:
+      213: -9003914089744380569
+    second: unreal3_17
+  - first:
+      213: -1878633020240255039
+    second: unreal3_18
+  - first:
+      213: 3438726349561249300
+    second: unreal3_19
+  - first:
+      213: -7323879958192700384
+    second: unreal3_20
+  - first:
+      213: 1555936075086514805
+    second: unreal3_21
+  - first:
+      213: -6272059536499609367
+    second: unreal3_22
+  - first:
+      213: -4247293133430682077
+    second: unreal3_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a5337ba6a41d3854ab417a0284836fae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
