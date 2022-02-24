@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheatManager : Singleton<CheatManager>
 {
     public bool hasUnlimitResource;
+    static public bool shouldLog = true;
     // Start is called before the first frame update
     void Start()
     {

@@ -157,7 +157,14 @@ public class Utils : MonoBehaviour
         return new Vector2Int(floatToGridIndex(origin.x), floatToGridIndex(origin.y));
     }
 
-
+    public static T randomFromList<T>(List<T> list)
+    {
+        return list[Random.Range(0, list.Count)];
+    }
+    public static T randomFromList<T>(T[] list)
+    {
+        return list[Random.Range(0, list.Length)];
+    }
     public static List<int> randomMultipleIndex(int count, int selectCount)
     {
   //      for i := 1 to k
