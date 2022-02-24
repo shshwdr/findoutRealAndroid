@@ -1,3 +1,4 @@
+using Pool;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,8 @@ using UnityEngine;
 public enum RealRule {sayImRobot,circleOnHead,squareOnBody,hasClothes,explainTheyHaveTattoo, metalBodyParts,rotateWrongDirection,talkWhenTakeOff,androidLie}
 public class GameManager : Singleton<GameManager>
 {
-    string[] allRules = new string[] { 
+    [HideInInspector]
+    public string[] allRules = new string[] { 
     "Android won't lie, if he said he is an andoid, then he is.",
     "Android has a blue circle on his head, use up, right and left arrow to check all three faces",
     "Android has a green square on his body.",
@@ -16,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     };
     public SetCharacter character;
     public int level;
+    public bool isLevelStarted;
     RealRule[] levelToRule = new RealRule[] {RealRule.sayImRobot,
         RealRule.circleOnHead,
         RealRule.squareOnBody,
@@ -35,18 +38,25 @@ public class GameManager : Singleton<GameManager>
     public int upgradeCount = 1;
     public void upgrade()
     {
+        isLevelStarted = false;
         level++;
         if(level>= levelToRule.Length)
         {
             return;
         }
         currentRules.Add(levelToRule[level]);
+        EventPool.Trigger("levelStart");
     }
     void Start()
     {
         currentRules.Add(levelToRule[0]);
-        resetCharacter();
+        EventPool.Trigger("levelStart");
+    }
 
+    public void startLevel()
+    {
+        isLevelStarted = true;
+        resetCharacter();
     }
 
     void resetCharacter()
