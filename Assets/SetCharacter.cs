@@ -85,7 +85,7 @@ public class SetCharacter : MonoBehaviour
     };
 
 
-
+    bool shouldResetLatestRule = false;
    
 
     // Start is called before the first frame update
@@ -100,6 +100,8 @@ public class SetCharacter : MonoBehaviour
         addNameFromPath(circlePath, true);
         addNameFromPath(squarePath, true);
         addNameFromPath(metalPartPath, false);
+
+
 
         //resetCharacter();
     }
@@ -143,7 +145,7 @@ public class SetCharacter : MonoBehaviour
             Debug.Log($"{path} {actualName}'s length is 0");
         }
 
-        int slashPos = actualName.LastIndexOf('.');
+        int slashPos = actualName.LastIndexOf(',');
         if (slashPos != -1)
         {
 
@@ -176,24 +178,43 @@ public class SetCharacter : MonoBehaviour
 
     string pickUnrealPath(bool onlyTattoo = false)
     {
-        List<string> possiblePath = new List<string>();
-        if (GameManager.Instance.currentRules.Contains(RealRule.circleOnHead))
+        string path = null;
+        if (GameManager.Instance.latestRule == RealRule.circleOnHead || GameManager.Instance.latestRule == RealRule.explainTheyHaveTattoo)
         {
-            possiblePath.Add(circlePath);
+            path = circlePath;
+            shouldResetLatestRule = true;
         }
-        if (GameManager.Instance.currentRules.Contains(RealRule.squareOnBody))
+        else if (GameManager.Instance.latestRule == RealRule.squareOnBody)
         {
-            possiblePath.Add(squarePath);
+            path = squarePath;
+            shouldResetLatestRule = true;
         }
-        if (!onlyTattoo && GameManager.Instance.currentRules.Contains(RealRule.metalBodyParts))
+        else if (GameManager.Instance.latestRule == RealRule.metalBodyParts || GameManager.Instance.latestRule == RealRule.explainTheyHaveMissingPart)
         {
-            possiblePath.Add(metalPartPath);
+            path = metalPartPath;
+            shouldResetLatestRule = true;
         }
-        if (possiblePath.Count == 0)
+        else
         {
-            return null;
+            List<string> possiblePath = new List<string>();
+            if (GameManager.Instance.currentRules.Contains(RealRule.circleOnHead))
+            {
+                possiblePath.Add(circlePath);
+            }
+            if (GameManager.Instance.currentRules.Contains(RealRule.squareOnBody))
+            {
+                possiblePath.Add(squarePath);
+            }
+            if (!onlyTattoo && GameManager.Instance.currentRules.Contains(RealRule.metalBodyParts))
+            {
+                possiblePath.Add(metalPartPath);
+            }
+            if (possiblePath.Count == 0)
+            {
+                return null;
+            }
+            path = possiblePath[Random.Range(0, possiblePath.Count)];
         }
-        var path =  possiblePath[Random.Range(0, possiblePath.Count)];
 
         if (CheatManager.shouldLog)
         {
@@ -221,18 +242,51 @@ public class SetCharacter : MonoBehaviour
             }
             else
             {
-                if (GameManager.Instance.currentRules.Contains(RealRule.androidLie))
+                if(GameManager.Instance.latestRule == RealRule.circleOnHead ||
+                   GameManager.Instance.latestRule == RealRule.squareOnBody ||
+                  GameManager.Instance.latestRule == RealRule.metalBodyParts)
                 {
-                    var rand = Random.Range(0f, 1f) > 0.85f;
-                    if (rand)
+                    updateWords(Utils.randomFromList(generalWords));
+                }
+                else
+                {
+                    if (GameManager.Instance.currentRules.Contains(RealRule.androidLie))
                     {
-                        updateWords(Utils.randomFromList(humanWords));
-                        isLying = true;
-                        return;
+                        if (GameManager.Instance.latestRule == RealRule.androidLie)
+                        {
+                            updateWords(Utils.randomFromList(humanWords));
+                            isLying = true;
+                            shouldResetLatestRule = true;
+                        }
+                        else
+                        {
+                            var rand = Random.Range(0f, 1f) > 0.85f;
+                            if (rand)
+                            {
+                                updateWords(Utils.randomFromList(humanWords));
+                                isLying = true;
+                                return;
+                            }
+                            else
+                            {
+                                rand = Random.Range(0f, 1f) > 0.85f;
+                                if (rand)
+                                {
+                                    updateWords(Utils.randomFromList(robotWords));
+                                    explain = explainImRobot;
+                                    return;
+                                }
+                                else
+                                {
+                                    updateWords(Utils.randomFromList(generalWords));
+                                }
+                            }
+                        }
+                        
                     }
                     else
                     {
-                        rand = Random.Range(0f, 1f) > 0.85f;
+                        var rand = Random.Range(0f, 1f) > 0.7f;
                         if (rand)
                         {
                             updateWords(Utils.randomFromList(robotWords));
@@ -241,25 +295,12 @@ public class SetCharacter : MonoBehaviour
                         }
                         else
                         {
+
                             updateWords(Utils.randomFromList(generalWords));
                         }
                     }
                 }
-                else
-                {
-                    var rand = Random.Range(0f, 1f) > 0.7f;
-                    if (rand)
-                    {
-                        updateWords(Utils.randomFromList(robotWords));
-                        explain = explainImRobot;
-                        return;
-                    }
-                    else
-                    {
-
-                        updateWords(Utils.randomFromList(generalWords));
-                    }
-                }
+                
             }
         }
         else
@@ -278,7 +319,7 @@ public class SetCharacter : MonoBehaviour
             }
             if (GameManager.Instance.currentRules.Contains(RealRule.explainTheyHaveTattoo))
             {
-                if (Random.Range(0, 2) > 0)
+                if (Random.Range(0, 2) > 0 || GameManager.Instance.latestRule == RealRule.explainTheyHaveTattoo || GameManager.Instance.latestRule == RealRule.explainTheyHaveMissingPart)
                 {
                     var pickedPath = pickUnrealPath();
                     //if (unrealTypes.Contains(pickedPath))
@@ -323,7 +364,7 @@ public class SetCharacter : MonoBehaviour
             }
             unrealTypes.Add(pickedPath);
             var finalName = resetItem(pickedPath, unreals[0]);
-            int pointPos = finalName.LastIndexOf('.');
+            int pointPos = finalName.LastIndexOf(',');
             if (pointPos != -1)
             {
                 finalName = finalName.Substring(pointPos);
@@ -359,7 +400,7 @@ public class SetCharacter : MonoBehaviour
                     unreal.gameObject.SetActive(true);
                     finalName = resetItem(pickUnrealPath(), unreal);
                     
-                pointPos = finalName.LastIndexOf('.');
+                pointPos = finalName.LastIndexOf(',');
                 if (pointPos != -1)
                 {
 
@@ -373,17 +414,43 @@ public class SetCharacter : MonoBehaviour
                 }
             }
 
-            if (GameManager.Instance.currentRules.Contains(RealRule.tattooLie) && !isLying && Random.Range(0, 2) < 1)
+            if (GameManager.Instance.currentRules.Contains(RealRule.tattooLie) && !isLying && Random.Range(0, 2) < 1 &&
+                GameManager.Instance.latestRule != RealRule.metalBodyParts)
             {
                 var pos = Utils.randomFromList(allTattooPosition);
                 int slashPos = pos.LastIndexOf('/');
                 var finalPos = pos.Substring(slashPos);
-                pointPos = finalPos.LastIndexOf('.');
+                pointPos = finalPos.LastIndexOf(',');
                 if (pointPos != -1)
                 {
 
                     finalPos = pos.Substring(pointPos);
                 }
+
+                if(GameManager.Instance.latestRule == RealRule.tattooLie)
+                {
+                    shouldResetLatestRule = true;
+                    int loopTest = 0;
+                    while (unrealFinalNames.Contains(finalPos))
+                    {
+                        loopTest++;
+                        if(loopTest > 100)
+                        {
+                            Debug.LogError("loop too many");
+                            break;
+                        }
+                        pos = Utils.randomFromList(allTattooPosition);
+                        slashPos = pos.LastIndexOf('/');
+                        finalPos = pos.Substring(slashPos);
+                        pointPos = finalPos.LastIndexOf(',');
+                        if (pointPos != -1)
+                        {
+
+                            finalPos = pos.Substring(pointPos);
+                        }
+                    }
+                }
+
                 if (!unrealFinalNames.Contains(finalPos))
                 {
                     if (CheatManager.shouldLog)
@@ -393,14 +460,47 @@ public class SetCharacter : MonoBehaviour
                     //lie about tattoo
                     isLying = true;
 
+                    updateWordsOfExplain(false, finalPos);
                     explain = explainLieTatto;
                 }
             }
-            if (GameManager.Instance.currentRules.Contains(RealRule.metalBodyParts) && !isLying && Random.Range(0, 2) < 1)
+
+            if (GameManager.Instance.currentRules.Contains(RealRule.metalPartLie) && !isLying && Random.Range(0, 2) < 1)
             {
-                var pos = Utils.randomFromList(allTattooPosition);
-                int slashPos = pos.LastIndexOf('_');
+                var pos = Utils.randomFromList(allMissingPartPosition);
+                int slashPos = pos.LastIndexOf('/');
                 var finalPos = pos.Substring(slashPos);
+                pointPos = finalPos.LastIndexOf(',');
+                if (pointPos != -1)
+                {
+
+                    finalPos = pos.Substring(pointPos);
+                }
+
+                if (GameManager.Instance.latestRule == RealRule.metalPartLie)
+                {
+                    shouldResetLatestRule = true;
+                    int loopTest = 0;
+                    while (unrealFinalNames.Contains(finalPos))
+                    {
+                        loopTest++;
+                        if (loopTest > 100)
+                        {
+                            Debug.LogError("loop too many");
+                            break;
+                        }
+                        pos = Utils.randomFromList(allMissingPartPosition);
+                        slashPos = pos.LastIndexOf('/');
+                        finalPos = pos.Substring(slashPos);
+                        pointPos = finalPos.LastIndexOf(',');
+                        if (pointPos != -1)
+                        {
+
+                            finalPos = pos.Substring(pointPos);
+                        }
+                    }
+                }
+
                 if (!unrealFinalNames.Contains(finalPos))
                 {
                     if (CheatManager.shouldLog)
@@ -410,6 +510,7 @@ public class SetCharacter : MonoBehaviour
                     //lie about tattoo
                     isLying = true;
 
+                    updateWordsOfExplain(false, finalPos);
                     explain = explainLieTatto;
                 }
             }
@@ -471,7 +572,7 @@ public class SetCharacter : MonoBehaviour
 
     public void decideIfReal()
     {
-        isReal = Random.Range(0, 2) > 0;
+        isReal = GameManager.Instance.nextType() == 0;
     }
 
    
@@ -515,6 +616,12 @@ public class SetCharacter : MonoBehaviour
         if (isLying)
         {
             explain = explainLie + explain;
+        }
+
+        if (shouldResetLatestRule)
+        {
+            GameManager.Instance.latestRule = RealRule.none;
+            shouldResetLatestRule = false;
         }
     }
 

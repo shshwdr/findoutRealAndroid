@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CharacterType { android, human}
-public enum RealRule {
+public enum CharacterType { android, human }
+public enum RealRule
+{
     sayImRobot,
     circleOnHead,
     squareOnBody,
@@ -25,8 +26,8 @@ public enum RealRule {
 
 
     none,
-   // rotateWrongDirection,
-   // talkWhenTakeOff,
+    // rotateWrongDirection,
+    // talkWhenTakeOff,
 
 }
 public class GameManager : Singleton<GameManager>
@@ -56,13 +57,17 @@ public class GameManager : Singleton<GameManager>
     "None",
     };
 
-    int[] adoidCount = new int[] { 1 };
+    public int[] androidCount = new int[] { 1 };
     List<List<int>> androidPattern = new List<List<int>>();
+    List<int> currentAndroidPattern;
 
-    public RealRule latestRule;
-    
+    [HideInInspector]
+    public RealRule latestRule = RealRule.none;
+
     public SetCharacter character;
+    [HideInInspector]
     public int level;
+    [HideInInspector]
     public bool isLevelStarted;
     RealRule[] levelToRule = new RealRule[] {
         RealRule.sayImRobot,
@@ -70,14 +75,15 @@ public class GameManager : Singleton<GameManager>
     RealRule.androidLie,
     RealRule.canReport,
         RealRule.squareOnBody,
-        //RealRule.hasClothes,
-    //RealRule.hasAccessory,
-    //RealRule.explainTheyHaveTattoo,
+        RealRule.hasClothes,
+    RealRule.hasAccessory,
+    RealRule.explainTheyHaveTattoo,
         RealRule.metalBodyParts,
     RealRule.tattooLie,
     RealRule.metalPartLie,
 
     };
+    [HideInInspector]
     public List<RealRule> currentRules = new List<RealRule>();
 
     int characterCount = 0;
@@ -90,23 +96,28 @@ public class GameManager : Singleton<GameManager>
     {
         isLevelStarted = false;
         level++;
-        if(atMaxLevel())
+        if (atMaxLevel())
         {
             latestRule = RealRule.none;
             return;
         }
         latestRule = levelToRule[level];
         currentRules.Add(latestRule);
+
+        if (latestRule == RealRule.canReport || latestRule == RealRule.hasAccessory || latestRule == RealRule.hasClothes)
+        {
+            latestRule = RealRule.none;
+        }
         EventPool.Trigger("levelStart");
     }
 
     public string getLevelText()
     {
-        if(level>= levelToRule.Length)
+        if (level >= levelToRule.Length)
         {
             return "";
         }
-        if((int)levelToRule[level] >= allRules.Length)
+        if ((int)levelToRule[level] >= allRules.Length)
         {
             Debug.LogError("this is wrong");
         }
@@ -116,6 +127,38 @@ public class GameManager : Singleton<GameManager>
     {
         currentRules.Add(levelToRule[0]);
         EventPool.Trigger("levelStart");
+
+
+        //generate androidPattern
+        foreach (var i in androidCount)
+        {
+            List<int> onePattern = new List<int>();
+            int j = 0;
+            for (; j < i; j++)
+            {
+
+                onePattern.Add(1);// 1 = android
+            }
+            for (; j < upgradeCount; j++)
+            {
+                onePattern.Add(0);
+            }
+            androidPattern.Add(onePattern);
+        }
+
+        generateCurrentLevelPattern();
+    }
+
+    void generateCurrentLevelPattern()
+    {
+        var potentialPattern = Utils.randomFromList(androidPattern);
+        potentialPattern.Shuffle();
+        currentAndroidPattern = potentialPattern;
+    }
+
+    public int nextType()
+    {
+        return currentAndroidPattern[characterCount];
     }
 
     public void startLevel()
@@ -124,7 +167,7 @@ public class GameManager : Singleton<GameManager>
         resetCharacter();
     }
 
-    public void answer(bool isCorrect,CharacterType type,bool isLying = false)//
+    public void answer(bool isCorrect, CharacterType type, bool isLying = false)//
     {
         if (isLying)
         {
@@ -163,15 +206,16 @@ public class GameManager : Singleton<GameManager>
         character.resetCharacter();
     }
 
-    
+
     public void nextCharacter()
     {
 
         characterCount++;
-        if (characterCount > upgradeCount)
+        if (characterCount >= upgradeCount)
         {
             upgrade();
             characterCount = 0;
+            generateCurrentLevelPattern();
 
         }
         resetCharacter();
