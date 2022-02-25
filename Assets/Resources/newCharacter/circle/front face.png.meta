@@ -146,6 +146,78 @@ TextureImporter:
   - first:
       213: 8894401412799752035
     second: front face_23
+  - first:
+      213: 2128351151768762043
+    second: _front face_0
+  - first:
+      213: -7353850910746872827
+    second: _front face_1
+  - first:
+      213: -5004070788666500537
+    second: _front face_2
+  - first:
+      213: 6607053964998115542
+    second: _front face_3
+  - first:
+      213: -1047138169139179390
+    second: _front face_4
+  - first:
+      213: -2443872903729678569
+    second: _front face_5
+  - first:
+      213: -8927112426989261892
+    second: _front face_6
+  - first:
+      213: 6048587253409708959
+    second: _front face_7
+  - first:
+      213: -2752546065231519678
+    second: _front face_8
+  - first:
+      213: 4581731174093067653
+    second: _front face_9
+  - first:
+      213: -5130379580316527
+    second: _front face_10
+  - first:
+      213: -4263764050561693912
+    second: _front face_11
+  - first:
+      213: 1935571711536462265
+    second: _front face_12
+  - first:
+      213: -5429223828727137330
+    second: _front face_13
+  - first:
+      213: 8064215547479630719
+    second: _front face_14
+  - first:
+      213: -8714262531882502833
+    second: _front face_15
+  - first:
+      213: -2830310852800948526
+    second: _front face_16
+  - first:
+      213: 991388982122940570
+    second: _front face_17
+  - first:
+      213: 7263454526371022179
+    second: _front face_18
+  - first:
+      213: -5403793378240489273
+    second: _front face_19
+  - first:
+      213: 5929345573625779350
+    second: _front face_20
+  - first:
+      213: -3895931263031135989
+    second: _front face_21
+  - first:
+      213: -7954927129366123000
+    second: _front face_22
+  - first:
+      213: 7814191181694009843
+    second: _front face_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:

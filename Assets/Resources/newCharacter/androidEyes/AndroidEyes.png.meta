@@ -1,223 +1,223 @@
 fileFormatVersion: 2
-guid: c01b76e4d39f5c34495274c9330781ec
+guid: 1f8e70e98b8f45348b85d1cb1c6409a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2512335494819335975
-    second: circleRight_0
+      213: -5443256105914165771
+    second: Eyes_48x48_01_0
   - first:
-      213: -4921566699096192718
-    second: circleRight_1
+      213: -4867643490123556070
+    second: Eyes_48x48_01_1
   - first:
-      213: -7911328904871480096
-    second: circleRight_2
+      213: -5124148538199790577
+    second: Eyes_48x48_01_2
   - first:
-      213: 4967156381225274302
-    second: circleRight_3
+      213: -2527490788251007075
+    second: Eyes_48x48_01_3
   - first:
-      213: -1949686077720739284
-    second: circleRight_4
+      213: -6417022136637056020
+    second: Eyes_48x48_01_4
   - first:
-      213: 6692177072037893414
-    second: circleRight_5
+      213: 923734490623719332
+    second: Eyes_48x48_01_5
   - first:
-      213: -6680780911264220428
-    second: circleRight_6
+      213: 8001013983726536274
+    second: Eyes_48x48_01_6
   - first:
-      213: -8981968971239140012
-    second: circleRight_7
+      213: -8855068073290665369
+    second: Eyes_48x48_01_7
   - first:
-      213: 5476383720078905309
-    second: circleRight_8
+      213: -8603017420595155529
+    second: Eyes_48x48_01_8
   - first:
-      213: -505652158926659035
-    second: circleRight_9
+      213: -1631608759981452819
+    second: Eyes_48x48_01_9
   - first:
-      213: -3594163708172210131
-    second: circleRight_10
+      213: -6391113378154726231
+    second: Eyes_48x48_01_10
   - first:
-      213: 1380143294116824780
-    second: circleRight_11
+      213: -5764041595731132516
+    second: Eyes_48x48_01_11
   - first:
-      213: -4638037755582089639
-    second: circleRight_12
+      213: -3621362682186732790
+    second: Eyes_48x48_01_12
   - first:
-      213: 4406515702626696162
-    second: circleRight_13
+      213: -2681830816970268115
+    second: Eyes_48x48_01_13
   - first:
-      213: 8217459916742475753
-    second: circleRight_14
+      213: -809353809366995291
+    second: Eyes_48x48_01_14
   - first:
-      213: 745121687113205247
-    second: circleRight_15
+      213: -3851008151603912263
+    second: Eyes_48x48_01_15
   - first:
-      213: 3411346908491148950
-    second: circleRight_16
+      213: -5997047948352483691
+    second: Eyes_48x48_01_16
   - first:
-      213: 5845015433986512194
-    second: circleRight_17
+      213: -5443145423817279471
+    second: Eyes_48x48_01_17
   - first:
-      213: 4480147811128279387
-    second: circleRight_18
+      213: -9214365888577414007
+    second: Eyes_48x48_01_18
   - first:
-      213: 5865010879584543312
-    second: circleRight_19
+      213: 7145055468647804075
+    second: Eyes_48x48_01_19
   - first:
-      213: 2458644883816367354
-    second: circleRight_20
+      213: 1291652107881026079
+    second: Eyes_48x48_01_20
   - first:
-      213: 5432690002529938051
-    second: circleRight_21
+      213: 4537264017936588968
+    second: Eyes_48x48_01_21
   - first:
-      213: -7243269319951082731
-    second: circleRight_22
+      213: 3164782877027587450
+    second: Eyes_48x48_01_22
   - first:
-      213: 8397960285653124300
-    second: circleRight_23
+      213: 3820980087675081722
+    second: Eyes_48x48_01_23
   - first:
-      213: -3292801371417965987
-    second: right face_0
+      213: -5106205684632509443
+    second: Eyes_48x48_01 1_0
   - first:
-      213: -298330043153622401
-    second: right face_1
+      213: -3489927455074273304
+    second: Eyes_48x48_01 1_1
   - first:
-      213: 620076846184205127
-    second: right face_2
+      213: -5202206818823222566
+    second: Eyes_48x48_01 1_2
   - first:
-      213: 3621431597708117637
-    second: right face_3
+      213: -6114590618712034424
+    second: Eyes_48x48_01 1_3
   - first:
-      213: -4394330934398711048
-    second: right face_4
+      213: 5022170536927164735
+    second: Eyes_48x48_01 1_4
   - first:
-      213: 5880594209440394706
-    second: right face_5
+      213: -5269056883597163048
+    second: Eyes_48x48_01 1_5
   - first:
-      213: -4674808433441447213
-    second: right face_6
+      213: -491059329975026570
+    second: Eyes_48x48_01 1_6
   - first:
-      213: 4925697223594204625
-    second: right face_7
+      213: -7961060790060077616
+    second: Eyes_48x48_01 1_7
   - first:
-      213: -3339296129361161059
-    second: right face_8
+      213: -5121770211476975121
+    second: Eyes_48x48_01 1_8
   - first:
-      213: 4616524193511732461
-    second: right face_9
+      213: 6966911238918445683
+    second: Eyes_48x48_01 1_9
   - first:
-      213: -2134869361650458881
-    second: right face_10
+      213: 5403879589820047918
+    second: Eyes_48x48_01 1_10
   - first:
-      213: -8118070720873612528
-    second: right face_11
+      213: 106209544601332392
+    second: Eyes_48x48_01 1_11
   - first:
-      213: 2650104126037906655
-    second: right face_12
+      213: 9197216264565525164
+    second: Eyes_48x48_01 1_12
   - first:
-      213: -1811231826295846351
-    second: right face_13
+      213: 3015692262277411238
+    second: Eyes_48x48_01 1_13
   - first:
-      213: 6300103931075049606
-    second: right face_14
+      213: 672390791908076506
+    second: Eyes_48x48_01 1_14
   - first:
-      213: 2944074234767563068
-    second: right face_15
+      213: 6692916492944960772
+    second: Eyes_48x48_01 1_15
   - first:
-      213: -527978792390626144
-    second: right face_16
+      213: -679843638006287795
+    second: Eyes_48x48_01 1_16
   - first:
-      213: -7351752891399312879
-    second: right face_17
+      213: 831633114885173438
+    second: Eyes_48x48_01 1_17
   - first:
-      213: 5325241726805542567
-    second: right face_18
+      213: 8876202369947364617
+    second: Eyes_48x48_01 1_18
   - first:
-      213: -5662223070656243989
-    second: right face_19
+      213: 6434944818163406902
+    second: Eyes_48x48_01 1_19
   - first:
-      213: 2812358755544501055
-    second: right face_20
+      213: -5098991040325581520
+    second: Eyes_48x48_01 1_20
   - first:
-      213: -3068212960592236175
-    second: right face_21
+      213: -6109812143137612796
+    second: Eyes_48x48_01 1_21
   - first:
-      213: 5532010182470559668
-    second: right face_22
+      213: -6923881529939521150
+    second: Eyes_48x48_01 1_22
   - first:
-      213: -1577930662245087403
-    second: right face_23
+      213: 3322449242231059221
+    second: Eyes_48x48_01 1_23
   - first:
-      213: 6743592969987325744
-    second: _right face_0
+      213: -1298789484231762837
+    second: AndroidEyes_0
   - first:
-      213: 5891642749655537872
-    second: _right face_1
+      213: 4162323513618914202
+    second: AndroidEyes_1
   - first:
-      213: 3530600235148400757
-    second: _right face_2
+      213: -1181595661264034366
+    second: AndroidEyes_2
   - first:
-      213: -2832878633812411124
-    second: _right face_3
+      213: 2300883772685245607
+    second: AndroidEyes_3
   - first:
-      213: 7588939090288468793
-    second: _right face_4
+      213: 178008401295004083
+    second: AndroidEyes_4
   - first:
-      213: -1990158213098359673
-    second: _right face_5
+      213: -6349333898224541040
+    second: AndroidEyes_5
   - first:
-      213: -7005924199170229317
-    second: _right face_6
+      213: 8161817112230077257
+    second: AndroidEyes_6
   - first:
-      213: -7467175593727238824
-    second: _right face_7
+      213: 7398858473131121307
+    second: AndroidEyes_7
   - first:
-      213: 320816940801424983
-    second: _right face_8
+      213: -1731367957863350387
+    second: AndroidEyes_8
   - first:
-      213: -5608223197861461379
-    second: _right face_9
+      213: -4824114589097076137
+    second: AndroidEyes_9
   - first:
-      213: 4313580022245957849
-    second: _right face_10
+      213: 4215192978193300916
+    second: AndroidEyes_10
   - first:
-      213: 8781144708488192389
-    second: _right face_11
+      213: -5069575953334277376
+    second: AndroidEyes_11
   - first:
-      213: -8482312007163755729
-    second: _right face_12
+      213: -2290212077030996505
+    second: AndroidEyes_12
   - first:
-      213: 3869185213505580815
-    second: _right face_13
+      213: -2417146349482939181
+    second: AndroidEyes_13
   - first:
-      213: 4983845270138471453
-    second: _right face_14
+      213: 1653325599219443639
+    second: AndroidEyes_14
   - first:
-      213: 2211152269838700041
-    second: _right face_15
+      213: -4295888967465840879
+    second: AndroidEyes_15
   - first:
-      213: -1286770014243958324
-    second: _right face_16
+      213: 7087529407669701288
+    second: AndroidEyes_16
   - first:
-      213: -8913711957134170173
-    second: _right face_17
+      213: 6365599566926882902
+    second: AndroidEyes_17
   - first:
-      213: -3865307513915148898
-    second: _right face_18
+      213: -7964266939024982910
+    second: AndroidEyes_18
   - first:
-      213: 4233955299774123142
-    second: _right face_19
+      213: 431668590353407540
+    second: AndroidEyes_19
   - first:
-      213: -7872026974569428193
-    second: _right face_20
+      213: -6907870418040936409
+    second: AndroidEyes_20
   - first:
-      213: 6615419052854223370
-    second: _right face_21
+      213: 2513495141713616735
+    second: AndroidEyes_21
   - first:
-      213: 1698221613218705987
-    second: _right face_22
+      213: 8786680152566596473
+    second: AndroidEyes_22
   - first:
-      213: -1467354889196743260
-    second: _right face_23
+      213: -8559418371239012089
+    second: AndroidEyes_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -319,7 +319,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: right face_0
+      name: AndroidEyes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -340,7 +340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_1
+      name: AndroidEyes_1
       rect:
         serializedVersion: 2
         x: 48
@@ -361,7 +361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_2
+      name: AndroidEyes_2
       rect:
         serializedVersion: 2
         x: 96
@@ -382,7 +382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_3
+      name: AndroidEyes_3
       rect:
         serializedVersion: 2
         x: 144
@@ -403,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_4
+      name: AndroidEyes_4
       rect:
         serializedVersion: 2
         x: 192
@@ -424,7 +424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_5
+      name: AndroidEyes_5
       rect:
         serializedVersion: 2
         x: 240
@@ -445,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_6
+      name: AndroidEyes_6
       rect:
         serializedVersion: 2
         x: 288
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_7
+      name: AndroidEyes_7
       rect:
         serializedVersion: 2
         x: 336
@@ -487,7 +487,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_8
+      name: AndroidEyes_8
       rect:
         serializedVersion: 2
         x: 384
@@ -508,7 +508,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_9
+      name: AndroidEyes_9
       rect:
         serializedVersion: 2
         x: 432
@@ -529,7 +529,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_10
+      name: AndroidEyes_10
       rect:
         serializedVersion: 2
         x: 480
@@ -550,7 +550,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_11
+      name: AndroidEyes_11
       rect:
         serializedVersion: 2
         x: 528
@@ -571,7 +571,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_12
+      name: AndroidEyes_12
       rect:
         serializedVersion: 2
         x: 576
@@ -592,7 +592,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_13
+      name: AndroidEyes_13
       rect:
         serializedVersion: 2
         x: 624
@@ -613,7 +613,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_14
+      name: AndroidEyes_14
       rect:
         serializedVersion: 2
         x: 672
@@ -634,7 +634,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_15
+      name: AndroidEyes_15
       rect:
         serializedVersion: 2
         x: 720
@@ -655,7 +655,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_16
+      name: AndroidEyes_16
       rect:
         serializedVersion: 2
         x: 768
@@ -676,7 +676,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_17
+      name: AndroidEyes_17
       rect:
         serializedVersion: 2
         x: 816
@@ -697,7 +697,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_18
+      name: AndroidEyes_18
       rect:
         serializedVersion: 2
         x: 864
@@ -718,7 +718,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_19
+      name: AndroidEyes_19
       rect:
         serializedVersion: 2
         x: 912
@@ -739,7 +739,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_20
+      name: AndroidEyes_20
       rect:
         serializedVersion: 2
         x: 960
@@ -760,7 +760,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_21
+      name: AndroidEyes_21
       rect:
         serializedVersion: 2
         x: 1008
@@ -781,7 +781,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_22
+      name: AndroidEyes_22
       rect:
         serializedVersion: 2
         x: 1056
@@ -802,7 +802,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right face_23
+      name: AndroidEyes_23
       rect:
         serializedVersion: 2
         x: 1104

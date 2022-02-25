@@ -8,7 +8,7 @@ public class OneRuleController : MonoBehaviour
     public Text ruleLabel;
     public void init(int level)
     {
-        ruleLabel.text = GameManager.Instance.allRules[level];
+        ruleLabel.text = GameManager.Instance.getLevelText();
     }
     // Start is called before the first frame update
     void Start()

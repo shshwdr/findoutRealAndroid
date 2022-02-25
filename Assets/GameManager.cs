@@ -4,46 +4,79 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum CharacterType { android, human}
-public enum RealRule {sayImRobot,
+public enum RealRule {
+    sayImRobot,
     circleOnHead,
     squareOnBody,
-    hasClothes,
-    explainTheyHaveTattoo, 
     metalBodyParts,
-    rotateWrongDirection,
-    talkWhenTakeOff,
-    androidLie,
     whiteEye,
+
+
+    hasClothes,
     hasAccessory,
+
+    explainTheyHaveTattoo,
+    explainTheyHaveMissingPart,
+
+    androidLie,
+    canReport,
+    tattooLie,
+    metalPartLie,
+
+
+    none,
+   // rotateWrongDirection,
+   // talkWhenTakeOff,
 
 }
 public class GameManager : Singleton<GameManager>
 {
     public int money;
+
+    public string[] allRules { get { return allRulesTexts; } }
+
     [HideInInspector]
-    public string[] allRules = new string[] { 
+    string[] allRulesTexts = new string[] {
     "Android won't lie, if he said he is an andoid, then he is.",
-    "Android has a blue circle on his head, use up, right and left arrow to check all three faces",
-    "Android has a green square on his body.",
-    "Too many testers and they don't have time to take off the clothes and accessories, click to take off them and take a full check.",
+    "Some android has a blue circle on his head, use up, right and left arrow to check all three faces",
+    "Some android has a green square on his body.",
     "Some android have a metal body parts",
-    "Some human have tattoos on their body. If they said they have tattoo on certain place, ignore that place if there is circle or square there.",
-    "Android would lie",
+    "Some android have white eyes",
 
+    "Too many testers and they don't have time to take off the clothes, click to take off them and take a full check.",
+    "Too many testers and they don't have time to take off the accessories, click to take off them and take a full check.",
 
+    "Some human have tattoos of circle on head or square on body. If he explained that he has the tattoo, then he's fine.",
+    "Some human have lost part of his body and has a metal body part. If he explained that, then he's fine.",
+
+    "Android would lie, if it says it is a human but it is not, it is an android",
+    "You can report if an android is lying and get more money",
+    "Android would lie about tattoo",
+    "Android would lie about metal body parts",
+    "None",
     };
+
+    int[] adoidCount = new int[] { 1 };
+    List<List<int>> androidPattern = new List<List<int>>();
+
+    public RealRule latestRule;
+    
     public SetCharacter character;
     public int level;
     public bool isLevelStarted;
     RealRule[] levelToRule = new RealRule[] {
-        //RealRule.sayImRobot,
+        RealRule.sayImRobot,
         RealRule.circleOnHead,
-        //RealRule.squareOnBody,
-        RealRule.hasClothes,
-    RealRule.hasAccessory,
-    RealRule.explainTheyHaveTattoo,
-     //   RealRule.metalBodyParts,
-    RealRule.androidLie
+    RealRule.androidLie,
+    RealRule.canReport,
+        RealRule.squareOnBody,
+        //RealRule.hasClothes,
+    //RealRule.hasAccessory,
+    //RealRule.explainTheyHaveTattoo,
+        RealRule.metalBodyParts,
+    RealRule.tattooLie,
+    RealRule.metalPartLie,
+
     };
     public List<RealRule> currentRules = new List<RealRule>();
 
@@ -59,10 +92,25 @@ public class GameManager : Singleton<GameManager>
         level++;
         if(atMaxLevel())
         {
+            latestRule = RealRule.none;
             return;
         }
-        currentRules.Add(levelToRule[level]);
+        latestRule = levelToRule[level];
+        currentRules.Add(latestRule);
         EventPool.Trigger("levelStart");
+    }
+
+    public string getLevelText()
+    {
+        if(level>= levelToRule.Length)
+        {
+            return "";
+        }
+        if((int)levelToRule[level] >= allRules.Length)
+        {
+            Debug.LogError("this is wrong");
+        }
+        return allRules[(int)levelToRule[level]];
     }
     void Start()
     {
@@ -76,21 +124,37 @@ public class GameManager : Singleton<GameManager>
         resetCharacter();
     }
 
-    public void answer(bool isCorrect,CharacterType type)//
+    public void answer(bool isCorrect,CharacterType type,bool isLying = false)//
     {
-        if (isCorrect)
+        if (isLying)
         {
-            if(type == CharacterType.android)
+            if (isCorrect)
             {
-                money += 15;
+
+                money += 30;
             }
             else
             {
-                money += 10;
+                money -= 30;
             }
-            EventPool.Trigger("updateMoney");
+        }
+        else
+        {
+
+            if (isCorrect)
+            {
+                if (type == CharacterType.android)
+                {
+                    money += 15;
+                }
+                else
+                {
+                    money += 10;
+                }
+            }
         }
 
+        EventPool.Trigger("updateMoney");
         GameManager.Instance.nextCharacter();
     }
 

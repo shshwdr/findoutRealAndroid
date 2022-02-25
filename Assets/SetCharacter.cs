@@ -12,18 +12,27 @@ public class SetCharacter : MonoBehaviour
     SpriteAnimator outfit;
     SpriteAnimator[] accessories;
     public bool isReal;
+    public bool isLying;
+
+    List<string> allTattooPosition = new List<string>();
+    List<string> allMissingPartPosition = new List<string>();
 
     public Text words;
     public string explain;
     const string explainImRobot = "It said he's an android!";
-    const string explainCircleOnFace = "It has a circle on face!";
-    const string explainSquareOnBody = "It has a square on body!";
-    const string explainMissBodyPart = "It has a metal body part!";
+    const string explainCircleOnFace = "It has a circle on {0}!";
+    const string explainSquareOnBody = "It has a square on {0}!";
+    const string explainMissBodyPart = "It has a metal {0}!";
+
+
+    const string explainLie = "It lies! ";
+    const string explainLieTatto = "It does not have tattoo on {0}!";
+    const string explainLieMetalPart = "It does not have metal {0}!";
 
 
     const string explainNormalHuman = "He looks a perfect human!";
-    const string explainExplainedTattoo = "He explained tattoo on body!";
-    const string explainExplainedMissBodyPart = "He explained the missing body part!";
+    const string explainExplainedTattoo = "He explained tattoo on {0}!";
+    const string explainExplainedMissBodyPart = "He explained the metal {0}!";
 
 
     string characterPath = "newCharacter/";
@@ -68,9 +77,16 @@ public class SetCharacter : MonoBehaviour
 
     };
 
-    
-  
+    string[] explainMissingParts = new string[] {
+    "I lost my {0} in a factory accident.",
+    "I don't have {0} since I was born.",
+    "I lost my {0} when fight with an evil android.",
 
+    };
+
+
+
+   
 
     // Start is called before the first frame update
     void Start()
@@ -80,7 +96,34 @@ public class SetCharacter : MonoBehaviour
         outfit = transform.Find("outfit").GetComponent<SpriteAnimator>();
         unreals = transform.Find("unreal").GetComponentsInChildren<SpriteAnimator>(true);
         hair = transform.Find("hair").GetComponent<SpriteAnimator>();
+
+        addNameFromPath(circlePath, true);
+        addNameFromPath(squarePath, true);
+        addNameFromPath(metalPartPath, false);
+
         //resetCharacter();
+    }
+
+    public void addNameFromPath(string path, bool isTattoo)
+    {
+        var test = Resources.LoadAll<Texture2D>(path);
+        //print(test);
+        if (test.Length == 0)
+        {
+            Debug.LogWarning($"item not exist in {path}");
+            return;
+        }
+        var cid = test[Random.Range(0, test.Length)];
+        var actualName = cid.name;
+        actualName = path + "/" + actualName;
+        if (isTattoo)
+        {
+            allTattooPosition.Add(actualName);
+        }
+        else
+        {
+            allMissingPartPosition.Add(actualName);
+        }
     }
     public string resetItem(string path, SpriteAnimator animator)
     {
@@ -93,12 +136,21 @@ public class SetCharacter : MonoBehaviour
         }
         var cid = test[Random.Range(0, test.Length)];
         animator.gameObject.SetActive(true);
-        animator.PlayerSpriteSheets = Resources.LoadAll<Sprite>(path + "/" + cid.name);
+        var actualName = cid.name;
+        animator.PlayerSpriteSheets = Resources.LoadAll<Sprite>(path + "/" + actualName);
         if(animator.PlayerSpriteSheets.Length == 0)
         {
-            Debug.Log($"{path} {cid.name}'s length is 0");
+            Debug.Log($"{path} {actualName}'s length is 0");
         }
-        return cid.name;
+
+        int slashPos = actualName.LastIndexOf('.');
+        if (slashPos != -1)
+        {
+
+            actualName = actualName.Substring(slashPos);
+        }
+
+        return actualName;
     }
     public void resetBase()
     {
@@ -111,6 +163,10 @@ public class SetCharacter : MonoBehaviour
         if (isTattoo)
         {
             generalWord = Utils.randomFromList(explainTattooWords);
+        }
+        else
+        {
+            generalWord = Utils.randomFromList(explainMissingParts);
         }
         //int slashPos = path.LastIndexOf('/');
         //path = path.Substring(slashPos);
@@ -165,17 +221,44 @@ public class SetCharacter : MonoBehaviour
             }
             else
             {
-                var rand = Random.Range(0f, 1f) > 0.7f;
-                if (rand)
+                if (GameManager.Instance.currentRules.Contains(RealRule.androidLie))
                 {
-                    updateWords(Utils.randomFromList(robotWords));
-                    explain = explainImRobot;
-                    return;
+                    var rand = Random.Range(0f, 1f) > 0.85f;
+                    if (rand)
+                    {
+                        updateWords(Utils.randomFromList(humanWords));
+                        isLying = true;
+                        return;
+                    }
+                    else
+                    {
+                        rand = Random.Range(0f, 1f) > 0.85f;
+                        if (rand)
+                        {
+                            updateWords(Utils.randomFromList(robotWords));
+                            explain = explainImRobot;
+                            return;
+                        }
+                        else
+                        {
+                            updateWords(Utils.randomFromList(generalWords));
+                        }
+                    }
                 }
                 else
                 {
+                    var rand = Random.Range(0f, 1f) > 0.7f;
+                    if (rand)
+                    {
+                        updateWords(Utils.randomFromList(robotWords));
+                        explain = explainImRobot;
+                        return;
+                    }
+                    else
+                    {
 
-                    updateWords(Utils.randomFromList(generalWords));
+                        updateWords(Utils.randomFromList(generalWords));
+                    }
                 }
             }
         }
@@ -204,7 +287,7 @@ public class SetCharacter : MonoBehaviour
                     //}
                     //unrealTypes.Add(pickedPath);
                     unreals[0].gameObject.SetActive(true);
-                    string path = pickUnrealPath(true);
+                    string path = pickUnrealPath(GameManager.Instance.currentRules.Contains(RealRule.explainTheyHaveMissingPart));
                     var itemName = resetItem(path, unreals[0]);
 
 
@@ -212,15 +295,16 @@ public class SetCharacter : MonoBehaviour
                     {
                         case circlePath:
                         case squarePath:
-                            explain = explainExplainedTattoo;
+                            explain = string.Format( explainExplainedTattoo,itemName);
+                            updateWordsOfExplain(true, itemName);
                             break;
                         case metalPartPath:
-                            explain = explainExplainedMissBodyPart;
+                            explain = string.Format(explainExplainedMissBodyPart, itemName);
+                            updateWordsOfExplain(false, itemName);
                             break;
 
                     }
 
-                    updateWordsOfExplain(true,itemName);
                     if (CheatManager.shouldLog)
                     {
                         Debug.Log("real people with a tattoo");
@@ -228,27 +312,34 @@ public class SetCharacter : MonoBehaviour
                 }
             }
         }
-        else
+        else//not real
         {
             List<string> unrealTypes = new List<string>();
+            List<string> unrealFinalNames = new List<string>();
             var pickedPath = pickUnrealPath();
             if (pickedPath == null)
             {
                 return;
             }
             unrealTypes.Add(pickedPath);
-            resetItem(pickedPath, unreals[0]);
-            if(explain == "")
+            var finalName = resetItem(pickedPath, unreals[0]);
+            int pointPos = finalName.LastIndexOf('.');
+            if (pointPos != -1)
+            {
+                finalName = finalName.Substring(pointPos);
+            }
+            unrealFinalNames.Add(finalName);
+            if (explain == "")
             {
                 switch (pickedPath) {
                     case circlePath:
-                        explain = explainCircleOnFace;
+                        explain = string.Format( explainCircleOnFace,finalName);
                         break;
                     case squarePath:
-                        explain = explainSquareOnBody;
+                        explain = string.Format(explainSquareOnBody, finalName);
                         break;
                     case metalPartPath:
-                        explain = explainMissBodyPart;
+                        explain = string.Format(explainMissBodyPart, finalName);
                         break;
                 
                 }
@@ -257,7 +348,7 @@ public class SetCharacter : MonoBehaviour
             for(int i = 1;i<unreals.Length;i++) 
             {
                 var unreal = unreals[i];
-                if (Random.Range(0, 2) > 0)
+                if (Random.Range(0, 3) > 1)
                 {
                     pickedPath = pickUnrealPath();
                     if (unrealTypes.Contains(pickedPath))
@@ -266,11 +357,60 @@ public class SetCharacter : MonoBehaviour
                     }
                     unrealTypes.Add(pickedPath);
                     unreal.gameObject.SetActive(true);
-                    resetItem(pickUnrealPath(), unreal);
+                    finalName = resetItem(pickUnrealPath(), unreal);
+                    
+                pointPos = finalName.LastIndexOf('.');
+                if (pointPos != -1)
+                {
+
+                        finalName = finalName.Substring(pointPos);
+                }
+                    unrealFinalNames.Add(finalName);
                 }
                 else
                 {
                     break;
+                }
+            }
+
+            if (GameManager.Instance.currentRules.Contains(RealRule.tattooLie) && !isLying && Random.Range(0, 2) < 1)
+            {
+                var pos = Utils.randomFromList(allTattooPosition);
+                int slashPos = pos.LastIndexOf('/');
+                var finalPos = pos.Substring(slashPos);
+                pointPos = finalPos.LastIndexOf('.');
+                if (pointPos != -1)
+                {
+
+                    finalPos = pos.Substring(pointPos);
+                }
+                if (!unrealFinalNames.Contains(finalPos))
+                {
+                    if (CheatManager.shouldLog)
+                    {
+                        Debug.Log($"lie about {pos}");
+                    }
+                    //lie about tattoo
+                    isLying = true;
+
+                    explain = explainLieTatto;
+                }
+            }
+            if (GameManager.Instance.currentRules.Contains(RealRule.metalBodyParts) && !isLying && Random.Range(0, 2) < 1)
+            {
+                var pos = Utils.randomFromList(allTattooPosition);
+                int slashPos = pos.LastIndexOf('_');
+                var finalPos = pos.Substring(slashPos);
+                if (!unrealFinalNames.Contains(finalPos))
+                {
+                    if (CheatManager.shouldLog)
+                    {
+                        Debug.Log($"lie about {pos}");
+                    }
+                    //lie about tattoo
+                    isLying = true;
+
+                    explain = explainLieTatto;
                 }
             }
         }
@@ -333,14 +473,18 @@ public class SetCharacter : MonoBehaviour
     {
         isReal = Random.Range(0, 2) > 0;
     }
+
+   
     public void resetCharacter()
     {
         explain = "";
+        
         if (CheatManager.shouldLog)
         {
             Debug.Log("start reset");
         }
         decideIfReal();
+        isLying = false;
         if (CheatManager.shouldLog)
         {
             Debug.Log($" it is real: {isReal}");
@@ -367,6 +511,10 @@ public class SetCharacter : MonoBehaviour
             {
                 Debug.LogWarning("why no explain?");
             }
+        }
+        if (isLying)
+        {
+            explain = explainLie + explain;
         }
     }
 

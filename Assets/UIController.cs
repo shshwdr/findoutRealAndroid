@@ -13,6 +13,9 @@ public class UIController : MonoBehaviour
     public Button currentRuleForLevelButton;
     public Text moneyLabel;
 
+
+    public GameObject reportButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,7 @@ public class UIController : MonoBehaviour
             GameManager.Instance.startLevel();
         });
         updateMoney();
+        reportButton.SetActive(false);
     }
     public void updateMoney()
     {
@@ -40,6 +44,10 @@ public class UIController : MonoBehaviour
         {
             currentRuleForLevel.SetActive(true);
             currentRuleForLevel.GetComponentInChildren<OneRuleController>().init(GameManager.Instance.level);
+        }
+        if (GameManager.Instance.currentRules.Contains(RealRule.canReport))
+        {
+            reportButton.SetActive(true);
         }
     }
 
@@ -60,6 +68,20 @@ public class UIController : MonoBehaviour
 
         go.GetComponent<PopupController>().init(isCorrect, character.explain);
         GameManager.Instance.answer(isCorrect, isReal ? CharacterType.human : CharacterType.android);
+    }
+
+    public void report()
+    {
+
+        if (!GameManager.Instance.isLevelStarted)
+        {
+            return;
+        }
+        var go = Instantiate(Resources.Load<GameObject>("popup"), popupTransform.position, Quaternion.identity);
+        bool isCorrect = character.isLying == true;
+
+        go.GetComponent<PopupController>().init(isCorrect, character.explain);
+        GameManager.Instance.answer(isCorrect, CharacterType.android,true);
     }
 
     // Update is called once per frame
