@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 75b09da11fc5b594fadec1856f61a39d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3786010099903841125
+    second: LargeDoorway_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: b9cb03f8fd3657bc0800000000000000
+      internalID: -3786010099903841125
       vertices: []
       indices: 
       edges: []

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 7c004e3a4c63de944978830bf3fc09ed
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -524998044926623053
+    second: WallDivider_LightBeam_ts_Diff_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 3b2cf584f05d6b8f0800000000000000
+      internalID: -524998044926623053
       vertices: []
       indices: 
       edges: []

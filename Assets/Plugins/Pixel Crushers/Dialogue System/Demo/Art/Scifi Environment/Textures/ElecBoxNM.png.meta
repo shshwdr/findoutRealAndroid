@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 03000e214160bd644a24828125d52980
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1367687533907139164
+    second: ElecBoxNM_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 4a52cb92f6ff40de0800000000000000
+      internalID: -1367687533907139164
       vertices: []
       indices: 
       edges: []

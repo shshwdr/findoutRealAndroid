@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 33d6870a7a177a843aa49fd3b7a6c7ad
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4076929899838604931
+    second: SMS Bubble_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 3868c06b42a249830800000000000000
+      internalID: 4076929899838604931
       vertices: []
       indices: 
       edges: []

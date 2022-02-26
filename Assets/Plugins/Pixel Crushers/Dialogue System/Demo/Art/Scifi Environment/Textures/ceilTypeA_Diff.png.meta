@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 74003c0aca445824dbd8c5ade40e49f8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7349211863103552113
+    second: ceilTypeA_Diff_0
+  - first:
+      213: 4542892311881612710
+    second: ceilTypeA_Diff_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 17abf5f6045adf560800000000000000
+      internalID: 7349211863103552113
       vertices: []
       indices: 
       edges: []
@@ -114,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 6ad7e860d789b0f30800000000000000
+      internalID: 4542892311881612710
       vertices: []
       indices: 
       edges: []

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: afe564cd16103044697441a95757b74d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -752002006336279094
+    second: btn1_pressed_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: acde1f5d82a5095f0800000000000000
+      internalID: -752002006336279094
       vertices: []
       indices: 
       edges: []

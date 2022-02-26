@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 34c69e9a19a994b4c96aad3920938c3a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2149811661305000429
+    second: Circle Timer Full_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 31e4ce92fa55a22e0800000000000000
+      internalID: -2149811661305000429
       vertices: []
       indices: 
       edges: []

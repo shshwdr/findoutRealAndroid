@@ -22,6 +22,13 @@ public class PopupController : MonoBehaviour
         explain.text = ex;
     }
 
+    public void initWarn()
+    {
+
+        result.color = Color.red;
+        result.text = "Think Twice!";
+    }
+
     // Start is called before the first frame update
     void Start()
     {

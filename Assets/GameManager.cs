@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     string[] allRulesTexts = new string[] {
     "Android won't lie, if he said he is an andoid, then he is.",
-    "Some android has a blue circle on his head, use up, right and left arrow to check all three faces",
+    "Some android has a blue circle on his face.",
     "Some android has a green square on his body.",
     "Some android have a metal body parts",
     "Some android have white eyes",
@@ -79,15 +79,17 @@ public class GameManager : Singleton<GameManager>
     RealRule[] levelToRule = new RealRule[] {
         RealRule.sayImRobot,
         RealRule.circleOnHead,
-    RealRule.androidLie,
-    RealRule.canReport,
         RealRule.squareOnBody,
         RealRule.hasClothes,
-    RealRule.hasAccessory,
-    RealRule.explainTheyHaveTattoo,
+        RealRule.explainTheyHaveTattoo,
+        //war almost
+        RealRule.androidLie,
+        RealRule.canReport,
+        //war start
         RealRule.metalBodyParts,
-    RealRule.tattooLie,
-    RealRule.metalPartLie,
+        RealRule.tattooLie,
+        RealRule.hasAccessory,
+        RealRule.metalPartLie,
 
     };
     [HideInInspector]
@@ -102,6 +104,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void upgrade()
     {
+        //ShopManager.Instance.health -= 30;
         isLevelStarted = false;
         Time.timeScale = 0;
         level++;
@@ -136,8 +139,36 @@ public class GameManager : Singleton<GameManager>
                 //EventPool.Trigger("updateStage");
             }
         }
+        ShopManager.Instance.clearShop();
         shopController.SetActive(true);
         shopController.GetComponent<ShopController>().updateShop();
+    }
+
+    public void closeShop()
+    {
+        //show dialog
+        pauseGameBetweenLevel();
+
+        ShopManager.Instance.updateHealth();
+    }
+
+    void pauseGameBetweenLevel()
+    {
+        Time.timeScale = 0;
+        //PixelCrushers.DialogueSystem.DialogueManager.has
+        if (PixelCrushers.DialogueSystem.DialogueManager.hasInstance)
+        {
+
+            PixelCrushers.DialogueSystem.DialogueManager.StartConversation($"M{level+1}");
+        }
+        else
+        {
+            finishDialogue();
+        }
+    }
+
+    void finishDialogue()
+    {
         EventPool.Trigger("levelStart");
     }
     public void clearLatestRule()
@@ -168,8 +199,9 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         currentRules.Add(levelToRule[0]);
-        EventPool.Trigger("levelStart");
-
+        // EventPool.Trigger("levelStart");
+        pauseGameBetweenLevel();
+        EventPool.OptIn("dialogEnd",finishDialogue);
         shopController = GameObject.FindObjectOfType<ShopController>(true).gameObject;
 
 

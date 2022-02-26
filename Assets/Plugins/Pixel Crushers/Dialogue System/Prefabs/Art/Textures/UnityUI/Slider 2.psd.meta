@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: Slider 2
+  - first:
+      213: -9061536118300504353
+    second: Slider 2_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: fde835519e4fe3280800000000000000
+      internalID: -9061536118300504353
       vertices: []
       indices: 
       edges: []

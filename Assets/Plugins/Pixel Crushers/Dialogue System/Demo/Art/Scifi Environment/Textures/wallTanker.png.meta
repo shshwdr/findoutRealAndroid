@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 139efdacaef06c5449a6d4ae9e19833d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8508520504119493093
+    second: wallTanker_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: b1e74db7ea9abe980800000000000000
+      internalID: -8508520504119493093
       vertices: []
       indices: 
       edges: []

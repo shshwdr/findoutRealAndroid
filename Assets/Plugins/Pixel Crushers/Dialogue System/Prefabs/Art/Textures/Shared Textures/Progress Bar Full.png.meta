@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: db2594dbf980d344eb86ef53b93320af
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4499254015703371412
+    second: Progress Bar Full_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: c6130cf8f407f81c0800000000000000
+      internalID: -4499254015703371412
       vertices: []
       indices: 
       edges: []

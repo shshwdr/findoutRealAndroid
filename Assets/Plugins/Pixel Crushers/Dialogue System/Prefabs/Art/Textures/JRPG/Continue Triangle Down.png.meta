@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: b3211798ba9323e49a18e1dc5cd40fae
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4037089100735402091
+    second: Continue Triangle Down_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: b605fefc52f960830800000000000000
+      internalID: 4037089100735402091
       vertices: []
       indices: 
       edges: []

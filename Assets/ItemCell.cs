@@ -19,9 +19,10 @@ public class ItemCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         costLabel.text = item.cost.ToString();
         var canBuy = item.canBuy;
 
-        costLabel.color = canBuy ? Color.white : Color.grey;
+        costLabel.color = canBuy ? Color.white : Color.red;
         button.onClick.AddListener(delegate { buy(); });
         button.interactable = canBuy;
+        button.GetComponentInChildren<Text>().color = canBuy ? Color.white : Color.red;
     }
 
     public void updateCell(Item it, int count, Text detail)

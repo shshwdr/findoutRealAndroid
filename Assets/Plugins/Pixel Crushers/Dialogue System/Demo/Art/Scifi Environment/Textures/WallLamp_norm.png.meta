@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 35bce0a0e4c3f22418e17e46c9885c71
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3009625154816332716
+    second: WallLamp_norm_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: ca358e3f12654c920800000000000000
+      internalID: 3009625154816332716
       vertices: []
       indices: 
       edges: []

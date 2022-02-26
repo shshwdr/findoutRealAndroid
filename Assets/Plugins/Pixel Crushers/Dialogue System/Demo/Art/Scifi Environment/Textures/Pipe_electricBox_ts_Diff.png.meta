@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: e2e245c7e87f2e34a99c3bbcf5687ede
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4809747768571313837
+    second: Pipe_electricBox_ts_Diff_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: daebbe4cc18afb240800000000000000
+      internalID: 4809747768571313837
       vertices: []
       indices: 
       edges: []

@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: 7eb1f74ad1ec5994aa6ab6604c169cfe
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2231571084704073642
+    second: ScrollButton_0
+  - first:
+      213: -3019612062451124401
+    second: ScrollButton_1
+  - first:
+      213: 2159353163007671222
+    second: ScrollButton_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +102,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: aa7c1d2041228fe10800000000000000
+      internalID: 2231571084704073642
       vertices: []
       indices: 
       edges: []
@@ -114,8 +123,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: f47bd1ae3de2816d0800000000000000
+      internalID: -3019612062451124401
       vertices: []
       indices: 
       edges: []
@@ -135,8 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 6bb30b1d24097fd10800000000000000
+      internalID: 2159353163007671222
       vertices: []
       indices: 
       edges: []

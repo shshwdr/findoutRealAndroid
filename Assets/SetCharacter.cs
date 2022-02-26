@@ -13,11 +13,16 @@ public class SetCharacter : MonoBehaviour
     SpriteAnimator[] accessories;
     public bool isReal;
     public bool isLying;
+    public bool isMute;
+    public bool wouldComplainClothes;
+    public bool accounceHuman;
+    public bool behaviorRobot;
 
     List<string> allTattooPosition = new List<string>();
     List<string> allMissingPartPosition = new List<string>();
 
     public Text words;
+    public Text clothesLabel;
     public string explain;
     const string explainImRobot = "It said he's an android!";
     const string explainCircleOnFace = "It has a circle on {0}!";
@@ -51,6 +56,9 @@ public class SetCharacter : MonoBehaviour
         "I'm a robot.",
         "I'm an android.",
         "I'm not a human.",
+        "I'm a machine.",
+        "I was made by human.",
+        "I'm not real.",
 
     };
 
@@ -59,6 +67,8 @@ public class SetCharacter : MonoBehaviour
         "I'm not a robot.",
         "I'm not an android.",
         "I'm a human.",
+        "I'm real.",
+        "I was born by human.",
 
     };
 
@@ -67,7 +77,18 @@ public class SetCharacter : MonoBehaviour
         "Good day.",
         "Please don't kill me.",
         "My name is Connor.",
+        "How's your day?",
+        "Why did you arrest me?",
+        "You look tired.",
+    };
 
+    string[] clothesWords = new string[]
+    {
+        "No! Please don't do this!",
+        "This is sexual harassment!",
+        "Don't take my clothes!",
+        "Don't take my clothes!",
+        "I am also dignified!",
     };
 
     string[] explainTattooWords = new string[] { 
@@ -230,8 +251,34 @@ public class SetCharacter : MonoBehaviour
             Debug.Log($"say words {word}");
         }
     }
+
+    public void takeClothesOff()
+    {
+        if (wouldComplainClothes)
+        {
+            updateClothesWords();
+        }
+    }
+
+
+    public void updateClothesWords()
+    {
+        clothesLabel.text = Utils.randomFromList(clothesWords);
+        if (CheatManager.shouldLog)
+        {
+            Debug.Log($"say clothes words {clothesLabel.text}");
+        }
+        StartCoroutine(changeclothesWordsBack());
+    }
+
+    IEnumerator changeclothesWordsBack()
+    {
+        yield return new WaitForSeconds(1);
+        clothesLabel.text = "";
+    }
     public void setWords()
     {
+        words.gameObject.SetActive(true);
         if (!isReal)
         {
             if (GameManager.Instance.currentRules.Count == 1)
@@ -263,6 +310,7 @@ public class SetCharacter : MonoBehaviour
                             var rand = Random.Range(0f, 1f) > 0.85f;
                             if (rand)
                             {
+                                accounceHuman = true;
                                 updateWords(Utils.randomFromList(humanWords));
                                 isLying = true;
                                 return;
@@ -295,12 +343,10 @@ public class SetCharacter : MonoBehaviour
                         }
                         else
                         {
-
                             updateWords(Utils.randomFromList(generalWords));
                         }
                     }
                 }
-                
             }
         }
         else
@@ -579,11 +625,16 @@ public class SetCharacter : MonoBehaviour
     public void resetCharacter()
     {
         explain = "";
-        
+        accounceHuman = false;
+        isMute = false;
+        wouldComplainClothes = true;
         if (CheatManager.shouldLog)
         {
             Debug.Log("start reset");
         }
+
+
+
         decideIfReal();
         isLying = false;
         if (CheatManager.shouldLog)

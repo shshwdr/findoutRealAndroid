@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: Button - Trimmed
+  - first:
+      213: 6183653526164498109
+    second: Button - Trimmed_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: db66021ae10c0d550800000000000000
+      internalID: 6183653526164498109
       vertices: []
       indices: 
       edges: []

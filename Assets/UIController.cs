@@ -97,8 +97,17 @@ public class UIController : MonoBehaviour
         {
             return;
         }
-        var go = Instantiate(Resources.Load<GameObject>("popup"), popupTransform.position,Quaternion.identity);
         bool isCorrect = character.isReal == isReal;
+
+        if (ShopManager.Instance.shouldAssist())
+        {
+            var go2 = Instantiate(Resources.Load<GameObject>("popup"), popupTransform.position, Quaternion.identity);
+            go2.GetComponent<PopupController>().initWarn();
+            return;
+        }
+
+
+        var go = Instantiate(Resources.Load<GameObject>("popup"), popupTransform.position, Quaternion.identity);
 
         go.GetComponent<PopupController>().init(isCorrect, character.explain);
         GameManager.Instance.answer(isCorrect, isReal ? CharacterType.human : CharacterType.android);
@@ -121,6 +130,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeLabel.text = ((int)(gameManager.currentTime)).ToString();
+        timeLabel.text = "Time: "+((int)(gameManager.currentTime)).ToString();
     }
 }

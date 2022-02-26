@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: Unity - Window
+  - first:
+      213: 1766993379980170483
+    second: Unity - Window_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 3f45f2efd1f958810800000000000000
+      internalID: 1766993379980170483
       vertices: []
       indices: 
       edges: []

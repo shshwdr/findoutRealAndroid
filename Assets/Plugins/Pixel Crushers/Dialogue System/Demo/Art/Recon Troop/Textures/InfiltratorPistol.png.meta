@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: d898db3a1a254844b8497217d6591192
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4406120227344985324
+    second: InfiltratorPistol_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 41350737ff05ad2c0800000000000000
+      internalID: -4406120227344985324
       vertices: []
       indices: 
       edges: []

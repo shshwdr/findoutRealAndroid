@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 1fd277ffd8b705847a11701bf3f564a1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -882308480591079190
+    second: WallTypeA_FloorRaft_ts_Diff_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: ae8dd009c1961c3f0800000000000000
+      internalID: -882308480591079190
       vertices: []
       indices: 
       edges: []

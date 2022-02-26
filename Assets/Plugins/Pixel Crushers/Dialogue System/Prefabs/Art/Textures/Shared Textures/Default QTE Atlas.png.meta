@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 55cedb0f46289194693d8f409d78e273
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3325560672709824348
+    second: Default QTE Atlas_0
+  - first:
+      213: -1034339362671124430
+    second: Default QTE Atlas_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 4a03f10103c39d1d0800000000000000
+      internalID: -3325560672709824348
       vertices: []
       indices: 
       edges: []
@@ -114,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 230a8ce64d945a1f0800000000000000
+      internalID: -1034339362671124430
       vertices: []
       indices: 
       edges: []

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 3ebe12b2f8f6ee54aa7fbbfcf1081017
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8383247032125124452
+    second: FloorTileA_norm_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: c9095d99d39b8ab80800000000000000
+      internalID: -8383247032125124452
       vertices: []
       indices: 
       edges: []

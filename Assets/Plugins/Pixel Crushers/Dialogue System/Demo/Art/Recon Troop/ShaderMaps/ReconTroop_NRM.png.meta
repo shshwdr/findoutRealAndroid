@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: e568b26774dde804c8237c942f5bfdc7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -626681365609269209
+    second: ReconTroop_NRM_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 728b0874e949d47f0800000000000000
+      internalID: -626681365609269209
       vertices: []
       indices: 
       edges: []

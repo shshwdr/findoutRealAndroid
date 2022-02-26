@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 9c4bc49969d983c408ad53891bef5253
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1227770752066101327
+    second: ReconTroopHelmet512x512_Red_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 1bf5c79810516fee0800000000000000
+      internalID: -1227770752066101327
       vertices: []
       indices: 
       edges: []

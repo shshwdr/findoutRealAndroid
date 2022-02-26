@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: Unity - Check Mark
+  - first:
+      213: 3499222721778484445
+    second: Unity - Check Mark_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: dd40599968cbf8030800000000000000
+      internalID: 3499222721778484445
       vertices: []
       indices: 
       edges: []

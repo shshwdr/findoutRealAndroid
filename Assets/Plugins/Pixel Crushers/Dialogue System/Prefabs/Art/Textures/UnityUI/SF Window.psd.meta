@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: SF Window
+  - first:
+      213: -841458554289248407
+    second: SF Window_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 967206237e98254f0800000000000000
+      internalID: -841458554289248407
       vertices: []
       indices: 
       edges: []

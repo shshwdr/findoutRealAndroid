@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: ea98217a9c10ced489bf5263b0a127e0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4944003964322989939
+    second: Dialog_light_0
+  - first:
+      213: 6862849228999968749
+    second: Dialog_light_1
+  - first:
+      213: -2476242768928514957
+    second: Dialog_light_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +102,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 377489d3961ac9440800000000000000
+      internalID: 4944003964322989939
       vertices: []
       indices: 
       edges: []
@@ -114,8 +123,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: de74b99430dbd3f50800000000000000
+      internalID: 6862849228999968749
       vertices: []
       indices: 
       edges: []
@@ -135,8 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 37cd264425e92add0800000000000000
+      internalID: -2476242768928514957
       vertices: []
       indices: 
       edges: []

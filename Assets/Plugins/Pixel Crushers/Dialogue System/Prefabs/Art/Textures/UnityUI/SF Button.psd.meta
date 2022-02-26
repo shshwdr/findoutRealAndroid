@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: SF Button - Hover
+  - first:
+      213: 5657003804427112007
+    second: SF Button_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 74e49efecf6b18e40800000000000000
+      internalID: 5657003804427112007
       vertices: []
       indices: 
       edges: []

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 2af0b3d0c6b321c43b9e73aeb637d776
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4085373488471804482
+    second: QTE 1 Evil_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: eb5f6dc1576dd47c0800000000000000
+      internalID: -4085373488471804482
       vertices: []
       indices: 
       edges: []

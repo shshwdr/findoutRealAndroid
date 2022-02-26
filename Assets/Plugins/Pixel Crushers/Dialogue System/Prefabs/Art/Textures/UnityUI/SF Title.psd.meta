@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: SF Title
+  - first:
+      213: 8438537871606994689
+    second: SF Title_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +99,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 107d0d42c75bb1570800000000000000
+      internalID: 8438537871606994689
       vertices: []
       indices: 
       edges: []

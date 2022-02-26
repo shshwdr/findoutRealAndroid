@@ -19,6 +19,9 @@ public class ShopManager : Singleton<ShopManager>
 {
     public int health = 100;
 
+    public bool ate;
+    public bool slept;
+    public bool assisted;
     public Dictionary<string, Item> itemInfoDict = new Dictionary<string, Item>();
     public Dictionary<string, int> itemInventory = new Dictionary<string, int>();
     private void Start()
@@ -31,23 +34,64 @@ public class ShopManager : Singleton<ShopManager>
         }
     }
 
+    public void clearShop()
+    {
+        ate = false;
+        slept = false;
+        assisted = false;
+    }
+    public bool shouldAssist()
+    {
+        if(ShopManager.Instance.itemInventory.ContainsKey("Assist") && !assisted)
+        {
+            assisted = true;
+            return true;
+        }
+        return false;
+    }
+    public void updateHealth()
+    {
+        if (!ate)
+        {
+            health -= 20;
+        }
+        if (!slept)
+        {
+            health -= 10;
+        }
+        if (itemInventory.ContainsKey("Succulents"))
+        {
+
+            health +=5;
+        }
+
+        if (health <= 0)
+        {
+            //game over
+            if (CheatManager.shouldLog)
+            {
+                Debug.Log("game over");
+            }
+        }
+        health = Mathf.Min(100, health);
+        EventPool.Trigger("updateHealth");
+    }
+
     public void buy(string name)
     {
         switch (name)
         {
             case "Food":
-                health += 20;
+                ate = true;
                 break;
             case "Bed":
-                health += 15;
+                slept = true;
                 break;
             default:
                 itemInventory[name] +=1;
                 break;
         }
         GameManager.Instance.money -= itemInfoDict[name].cost;
-        health = Mathf.Min(100, health);
-        EventPool.Trigger("updateHealth");
         EventPool.Trigger("updateMoney");
     }
 
@@ -59,7 +103,7 @@ public class ShopManager : Singleton<ShopManager>
             switch (name)
             {
                 case "emergency":
-                    health += 20;
+                    health += 15;
                     break;
             }
             itemInventory[name] -= 1;
