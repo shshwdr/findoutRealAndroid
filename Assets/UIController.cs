@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     public GameObject currentRuleForLevel;
     public Button currentRuleForLevelButton;
     public Text moneyLabel;
+    public Text healthLabel;
 
 
     public GameObject reportButton;
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
     {
         EventPool.OptIn("levelStart", showCurrentRuleForLevel);
         EventPool.OptIn("updateMoney", updateMoney);
+        EventPool.OptIn("updateHealth", updateHealth);
         currentRuleForLevelButton.onClick.AddListener(delegate
         {
             hideCurrentRuleForLevel();
@@ -31,7 +33,21 @@ public class UIController : MonoBehaviour
     }
     public void updateMoney()
     {
-        moneyLabel.text = $"Money: {GameManager.Instance.money}"; 
+        moneyLabel.text = $"Money: {GameManager.Instance.money}";
+    }
+    public void updateHealth()
+    {
+        var health = ShopManager.Instance.health;
+        moneyLabel.text = $"Health: {health}";
+        if (health <= 0)
+        {
+            moneyLabel.color = Color.red;
+        }
+        else
+        {
+            moneyLabel.color = Color.white;
+
+        }
     }
     public void showCurrentRuleForLevel()
     {

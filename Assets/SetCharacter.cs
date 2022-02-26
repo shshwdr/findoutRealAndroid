@@ -620,7 +620,7 @@ public class SetCharacter : MonoBehaviour
 
         if (shouldResetLatestRule)
         {
-            GameManager.Instance.latestRule = RealRule.none;
+            GameManager.Instance.clearLatestRule();
             shouldResetLatestRule = false;
         }
     }

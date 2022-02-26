@@ -26,14 +26,17 @@ public enum RealRule
 
 
     none,
-    // rotateWrongDirection,
-    // talkWhenTakeOff,
+    rotateWrongDirection,
+    talkWhenTakeOff,
 
 }
 public class GameManager : Singleton<GameManager>
 {
-    public int money;
 
+
+    public int money;
+    public int gameStage;
+    int[] gameStages = new int[] { 1, 2, 3 };
     public string[] allRules { get { return allRulesTexts; } }
 
     [HideInInspector]
@@ -60,7 +63,7 @@ public class GameManager : Singleton<GameManager>
     public int[] androidCount = new int[] { 1 };
     List<List<int>> androidPattern = new List<List<int>>();
     List<int> currentAndroidPattern;
-
+    GameObject shopController;
     [HideInInspector]
     public RealRule latestRule = RealRule.none;
 
@@ -108,10 +111,43 @@ public class GameManager : Singleton<GameManager>
         {
             latestRule = RealRule.none;
         }
+        else
+        {
+            if (CheatManager.shouldLog)
+            {
+                Debug.Log($"latest rule change to {latestRule}");
+            }
+        }
+        if (gameStage < gameStages.Length)
+        {
+            if(level >= gameStages[gameStage])
+            {
+                gameStage++;
+                if (CheatManager.shouldLog)
+                {
+                    Debug.Log($"update stage to {gameStage}");
+                }
+                //EventPool.Trigger("updateStage");
+            }
+        }
+        shopController.SetActive(true);
+        shopController.GetComponent<ShopController>().updateShop();
         EventPool.Trigger("levelStart");
     }
+    public void clearLatestRule()
+    {
 
+        if (CheatManager.shouldLog)
+        {
+            Debug.Log($"clear  {latestRule}");
+        }
+        latestRule = RealRule.none;
+    }
     public string getLevelText()
+    {
+        return getLevelText(level);
+    }
+    public string getLevelText(int l)
     {
         if (level >= levelToRule.Length)
         {
@@ -127,6 +163,8 @@ public class GameManager : Singleton<GameManager>
     {
         currentRules.Add(levelToRule[0]);
         EventPool.Trigger("levelStart");
+
+        shopController = GameObject.FindObjectOfType<ShopController>(true).gameObject;
 
 
         //generate androidPattern
