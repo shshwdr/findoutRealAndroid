@@ -33,9 +33,13 @@ public enum RealRule
 public class GameManager : Singleton<GameManager>
 {
 
+    public int maxTime;
+    public float currentTime;
 
     public int money;
-    public int gameStage;
+    int gameStage;
+    int maxStage = 2;
+    public int currentGameStage { get { return Mathf.Min(gameStage, maxStage); } }
     int[] gameStages = new int[] { 1, 2, 3 };
     public string[] allRules { get { return allRulesTexts; } }
 
@@ -89,7 +93,8 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     public List<RealRule> currentRules = new List<RealRule>();
 
-    int characterCount = 0;
+    [HideInInspector]
+    public int characterCount = 0;
     public int upgradeCount = 1;
     public bool atMaxLevel()
     {
@@ -98,6 +103,7 @@ public class GameManager : Singleton<GameManager>
     public void upgrade()
     {
         isLevelStarted = false;
+        Time.timeScale = 0;
         level++;
         if (atMaxLevel())
         {
@@ -184,6 +190,7 @@ public class GameManager : Singleton<GameManager>
             androidPattern.Add(onePattern);
         }
 
+        Time.timeScale = 0;
         generateCurrentLevelPattern();
     }
 
@@ -202,6 +209,9 @@ public class GameManager : Singleton<GameManager>
     public void startLevel()
     {
         isLevelStarted = true;
+
+        currentTime = maxTime;
+        Time.timeScale = 1;
         resetCharacter();
     }
 
@@ -257,6 +267,7 @@ public class GameManager : Singleton<GameManager>
 
         }
         resetCharacter();
+        EventPool.Trigger("nextCharacter");
     }
 
     // Update is called once per frame
@@ -265,6 +276,11 @@ public class GameManager : Singleton<GameManager>
         if (Input.GetKeyDown(KeyCode.R))
         {
             resetCharacter();
+        }
+        currentTime -= Time.deltaTime;
+        if (isLevelStarted && currentTime <= 0 )
+        {
+            upgrade();
         }
     }
 }

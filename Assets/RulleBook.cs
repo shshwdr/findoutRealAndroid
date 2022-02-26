@@ -30,7 +30,7 @@ public class RulleBook : MonoBehaviour
     }
     public void updateView()
     {
-        int i = 0
+        int i = 0;
         for (; i <= GameManager.Instance.level; i++)
         {
             ruleCells[i].gameObject.SetActive(true);

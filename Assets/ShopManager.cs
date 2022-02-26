@@ -12,7 +12,7 @@ public class Item {
     public int consumable;
     public bool canBuy { get { return CheatManager.Instance.hasUnlimitResource ||  GameManager.Instance.money >= cost; } }
     public bool wouldSell { get { return onlyHasOne == 0 || ShopManager.Instance.itemInventory[name] < 1; } }
-    public int cost { get { return costs[GameManager.Instance.gameStage]; } }
+    public int cost { get {   return costs[GameManager.Instance.currentGameStage]; } }
 }
 
 public class ShopManager : Singleton<ShopManager>

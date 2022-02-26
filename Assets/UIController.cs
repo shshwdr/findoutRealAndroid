@@ -15,37 +15,53 @@ public class UIController : MonoBehaviour
     public Text healthLabel;
 
 
+    public Text timeLabel;
+    public Text testerLabel;
+
+    GameManager gameManager;
+
+
+
     public GameObject reportButton;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameManager.Instance;
         EventPool.OptIn("levelStart", showCurrentRuleForLevel);
         EventPool.OptIn("updateMoney", updateMoney);
         EventPool.OptIn("updateHealth", updateHealth);
+        EventPool.OptIn("nextCharacter",updateCharacter);
         currentRuleForLevelButton.onClick.AddListener(delegate
         {
             hideCurrentRuleForLevel();
             GameManager.Instance.startLevel();
         });
         updateMoney();
+        updateCharacter();
+        updateHealth();
         reportButton.SetActive(false);
     }
     public void updateMoney()
     {
         moneyLabel.text = $"Money: {GameManager.Instance.money}";
     }
+
+    public void updateCharacter()
+    {
+        testerLabel.text = $"Left: {GameManager.Instance.upgradeCount - gameManager.characterCount-1}";
+    }
     public void updateHealth()
     {
         var health = ShopManager.Instance.health;
-        moneyLabel.text = $"Health: {health}";
+        healthLabel.text = $"Health: {health}";
         if (health <= 0)
         {
-            moneyLabel.color = Color.red;
+            healthLabel.color = Color.red;
         }
         else
         {
-            moneyLabel.color = Color.white;
+            healthLabel.color = Color.black;
 
         }
     }
@@ -65,6 +81,8 @@ public class UIController : MonoBehaviour
         {
             reportButton.SetActive(true);
         }
+
+
     }
 
     void hideCurrentRuleForLevel()
@@ -103,6 +121,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timeLabel.text = ((int)(gameManager.currentTime)).ToString();
     }
 }
