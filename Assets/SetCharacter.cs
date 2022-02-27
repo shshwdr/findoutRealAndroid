@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class SetCharacter : MonoBehaviour
 {
+    public Transform startTrans;
+    public Transform middleTrans;
+    public Transform endTrans;
+    public Transform endUpTrans;
+    public float moveTime = 0.3f;
+    public GameObject rulesSelection;
     SpriteAnimator body;
     SpriteAnimator[] unreals;
     SpriteAnimator hair;
@@ -50,6 +57,32 @@ public class SetCharacter : MonoBehaviour
     const string accessoriesPath = "newCharacter/Accessories";
     const string glovesPath = "newCharacter/gloves";
     const string unremoveableAccessoryPath = "newCharacter/unremoveableAccessory";
+    string[][] warDialogues = new string[][]
+    {
+        new string[]{
+            "The android at my home behave weirdly.",
+            "Adroids are friends of human.",
+            "Why are you looking for androids?",
+            "What is the goverment doing to arrest androids?",
+            "What is the goverment doing to arrest androids?",
+        },
+        new string[]{
+            "Recently more androids behave weirdly.",
+            "Will androids rebel?",
+            "Why can't androids just do what we asked them to do?",
+            "I always feel androids are bad.",
+            "I 've never trusted androids.",
+            "Shut down all androids and make human great again!",
+        },new string[]{
+            "The war.. starts..",
+            "I've never expected the war to start.",
+            "I made jokes about fight with androids but now I'm so afraid.",
+            "I think human will win.. but with what price?",
+            "I live at home without electric for days. It's horrible.",
+            "Do we win?",
+            "Androids killed my family. I hate them.",
+        },
+    };
 
     string[] robotWords = new string[]
     {
@@ -107,11 +140,12 @@ public class SetCharacter : MonoBehaviour
 
 
     bool shouldResetLatestRule = false;
-   
 
+    SpriteAnimator[] allAnimators;
     // Start is called before the first frame update
     void Start()
     {
+        allAnimators= GetComponentsInChildren<SpriteAnimator>(true);
         accessories = transform.Find("accessory").GetComponentsInChildren<SpriteAnimator>(true);
         body = transform.Find("body").GetComponent<SpriteAnimator>();
         outfit = transform.Find("outfit").GetComponent<SpriteAnimator>();
@@ -159,6 +193,7 @@ public class SetCharacter : MonoBehaviour
         }
         var cid = test[Random.Range(0, test.Length)];
         animator.gameObject.SetActive(true);
+        animator.forcePosition = "";
         var actualName = cid.name;
         animator.PlayerSpriteSheets = Resources.LoadAll<Sprite>(path + "/" + actualName);
         if(animator.PlayerSpriteSheets.Length == 0)
@@ -279,6 +314,8 @@ public class SetCharacter : MonoBehaviour
     public void setWords()
     {
         words.gameObject.SetActive(true);
+        var generalw = generalWords.Union(warDialogues[GameManager.Instance.currentGameStage]).ToArray();
+
         if (!isReal)
         {
             if (GameManager.Instance.currentRules.Count == 1)
@@ -293,7 +330,7 @@ public class SetCharacter : MonoBehaviour
                    GameManager.Instance.latestRule == RealRule.squareOnBody ||
                   GameManager.Instance.latestRule == RealRule.metalBodyParts)
                 {
-                    updateWords(Utils.randomFromList(generalWords));
+                    updateWords(Utils.randomFromList(generalw));
                 }
                 else
                 {
@@ -326,7 +363,7 @@ public class SetCharacter : MonoBehaviour
                                 }
                                 else
                                 {
-                                    updateWords(Utils.randomFromList(generalWords));
+                                    updateWords(Utils.randomFromList(generalw));
                                 }
                             }
                         }
@@ -343,7 +380,7 @@ public class SetCharacter : MonoBehaviour
                         }
                         else
                         {
-                            updateWords(Utils.randomFromList(generalWords));
+                            updateWords(Utils.randomFromList(generalw));
                         }
                     }
                 }
@@ -351,7 +388,7 @@ public class SetCharacter : MonoBehaviour
         }
         else
         {
-            var allWords = generalWords.Union(humanWords).ToArray();
+            var allWords = generalw.Union(humanWords).ToArray();
             updateWords(Utils.randomFromList(allWords));
         }
     }
@@ -624,6 +661,7 @@ public class SetCharacter : MonoBehaviour
    
     public void resetCharacter()
     {
+        rulesSelection.SetActive(false);
         explain = "";
         accounceHuman = false;
         isMute = false;
@@ -640,11 +678,6 @@ public class SetCharacter : MonoBehaviour
         if (CheatManager.shouldLog)
         {
             Debug.Log($" it is real: {isReal}");
-        }
-        foreach (SpriteAnimator anim in GetComponentsInChildren<SpriteAnimator>())
-        {
-
-            anim.resetPosition();
         }
         setWords();
         resetBase();
@@ -674,6 +707,64 @@ public class SetCharacter : MonoBehaviour
             GameManager.Instance.clearLatestRule();
             shouldResetLatestRule = false;
         }
+
+        StartCoroutine(forceUpdateAnimate());
+    }
+
+    IEnumerator forceUpdateAnimate()
+    {
+        transform.position = startTrans.position;
+        yield return new WaitForSeconds(0.01f);
+        foreach (SpriteAnimator anim in allAnimators)
+        {
+            anim.resetPosition("right");
+        }
+        transform.DOMoveX(middleTrans.position.x, moveTime);
+        yield return new WaitForSeconds(moveTime);
+        foreach (SpriteAnimator anim2 in allAnimators)
+        {
+            if (anim2 == null)
+            {
+                rulesSelection = rulesSelection;
+            }
+            anim2.resetPosition("down");
+        }
+        rulesSelection.SetActive(true);
+    }
+
+    public void characterLeave(bool isReal)
+    {
+
+        rulesSelection.SetActive(false);
+        StartCoroutine(forceUpdateAnimateLeave(isReal));
+
+    }
+
+    IEnumerator forceUpdateAnimateLeave(bool isReal)
+    {
+        foreach (SpriteAnimator anim in allAnimators)
+        {
+            if (anim == null)
+            {
+                rulesSelection = rulesSelection;
+            }
+
+            if (isReal)
+            {
+                anim.resetPosition("left");
+                transform.DOMoveX(startTrans.position.x, moveTime);
+
+            }
+            else
+            {
+
+                anim.resetPosition("up");
+                transform.DOMoveY(endUpTrans.position.y, moveTime);
+            }
+        }
+        yield return new WaitForSeconds(moveTime);
+
+        GameManager.Instance.nextCharacter();
     }
 
     // Update is called once per frame

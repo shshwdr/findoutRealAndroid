@@ -1,6 +1,6 @@
 ﻿name,displayName,desc,costs,onlyHasOne,consumable
-Food,Food,Eat food or decrease 20 health.,20|30|40,0,1
-Bed,Rent,Sleep or decrease 10 health.,20|25|30,0,1
+Food,Food,Eat food or decrease 20 health.,20|30|40|50,0,1
+Bed,Rent,Sleep or decrease 10 health.,20|25|30|40,0,1
 emergency,Emergency Food,You can store it to eat later and gain 15 health,10|20|40|60,0,0
-Succulents,Succulents,Make you happy and gain 5 health everyday.,100|80|60,1,0
-Assist,AI Assist System,Warn you the first time you make a mistake everyday,100|100|100,1,0
+Succulents,Succulents,Make you happy and gain 5 health everyday.,100|80|60|40,1,0
+Assist,AI Assist System,Warn you the first time you make a mistake everyday,100|100|100|100,1,0

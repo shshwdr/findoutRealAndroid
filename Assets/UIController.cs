@@ -111,6 +111,7 @@ public class UIController : MonoBehaviour
 
         go.GetComponent<PopupController>().init(isCorrect, character.explain);
         GameManager.Instance.answer(isCorrect, isReal ? CharacterType.human : CharacterType.android);
+        character.characterLeave(isReal);
     }
 
     public void report()
@@ -125,6 +126,7 @@ public class UIController : MonoBehaviour
 
         go.GetComponent<PopupController>().init(isCorrect, character.explain);
         GameManager.Instance.answer(isCorrect, CharacterType.android,true);
+        character.characterLeave(false);
     }
 
     // Update is called once per frame

@@ -7,6 +7,8 @@ public class SpriteAnimator : MonoBehaviour
      SpriteRenderer PlayerSprite;
     Animator animator;
     public Sprite[] PlayerSpriteSheets;
+
+    public string forcePosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,43 +21,69 @@ public class SpriteAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var horizontal =(int) Input.GetAxisRaw("Horizontal");
-        if (horizontal != 0)
+        if (forcePosition.Length>0)
         {
-            if(horizontal == 1)
+            //Debug.LogError($"force position still has value {forcePosition}");
+            if (CheatManager.shouldLog)
             {
-
-                animator.SetTrigger("right");
+                Debug.Log($"force move to {forcePosition}");
             }
-            else
-            {
-
-                animator.SetTrigger("left");
-            }
+            animator.SetTrigger(forcePosition);
+            forcePosition = "";
         }
         else
         {
-
-            var verticle = (int)Input.GetAxisRaw("Vertical");
-            if (verticle != 0)
+            var horizontal = (int)Input.GetAxisRaw("Horizontal");
+            if (horizontal != 0)
             {
-                if (verticle == -1)
+                if (horizontal == 1)
                 {
-                    animator.SetTrigger("down");
+
+                    animator.SetTrigger("right");
                 }
                 else
                 {
 
-                    animator.SetTrigger("up");
+                    animator.SetTrigger("left");
+                }
+            }
+            else
+            {
+
+                var verticle = (int)Input.GetAxisRaw("Vertical");
+                if (verticle != 0)
+                {
+                    if (verticle == -1)
+                    {
+                        animator.SetTrigger("down");
+                    }
+                    else
+                    {
+
+                        animator.SetTrigger("up");
+                    }
                 }
             }
         }
+        
     }
 
-    public void resetPosition()
+    public void resetPosition(string dir)
     {
+        //if(animator == null)
+        //{
 
-        animator.SetTrigger("down");
+        //    animator = GetComponent<Animator>();
+        //}
+        //animator.SetTrigger("right");
+        //if (forcePosition.Length > 0)
+        //{
+        //    forcePosition = "";
+        //}
+        //else
+        {
+            forcePosition = dir;
+        }
     }
     public void SetSprite(int id)
     {
@@ -63,6 +91,12 @@ public class SpriteAnimator : MonoBehaviour
         {
             PlayerSprite.sprite = null;
             Debug.LogWarning(id+" "+ PlayerSpriteSheets.Length);
+            return;
+        }
+        if(PlayerSpriteSheets == null || PlayerSprite == null)
+        {
+
+            //Debug.LogWarning("something is null");
             return;
         }
         PlayerSprite.sprite = PlayerSpriteSheets[id];

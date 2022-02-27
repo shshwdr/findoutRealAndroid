@@ -53,6 +53,7 @@ public class ShopManager : Singleton<ShopManager>
     {
         if (!ate)
         {
+            //popup for health reduce
             health -= 20;
         }
         if (!slept)
@@ -68,10 +69,12 @@ public class ShopManager : Singleton<ShopManager>
         if (health <= 0)
         {
             //game over
+            GameEndingManager.Instance.GameOver();
             if (CheatManager.shouldLog)
             {
                 Debug.Log("game over");
             }
+
         }
         health = Mathf.Min(100, health);
         EventPool.Trigger("updateHealth");

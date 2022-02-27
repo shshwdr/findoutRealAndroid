@@ -38,9 +38,9 @@ public class GameManager : Singleton<GameManager>
 
     public int money;
     int gameStage;
-    int maxStage = 2;
+    int maxStage = 3;
     public int currentGameStage { get { return Mathf.Min(gameStage, maxStage); } }
-    int[] gameStages = new int[] { 1, 2, 3 };
+    int[] gameStages = new int[] { 3, 7, 11 };
     public string[] allRules { get { return allRulesTexts; } }
 
     [HideInInspector]
@@ -77,19 +77,21 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     public bool isLevelStarted;
     RealRule[] levelToRule = new RealRule[] {
-        RealRule.sayImRobot,
-        RealRule.circleOnHead,
-        RealRule.squareOnBody,
-        RealRule.hasClothes,
-        RealRule.explainTheyHaveTattoo,
+        RealRule.sayImRobot,//0
+        RealRule.circleOnHead,//1
+        RealRule.squareOnBody,//2
         //war almost
-        RealRule.androidLie,
-        RealRule.canReport,
+        RealRule.hasClothes,//3
+        RealRule.explainTheyHaveTattoo,//4
+        RealRule.androidLie,//5
+        RealRule.canReport,//6
         //war start
-        RealRule.metalBodyParts,
-        RealRule.tattooLie,
-        RealRule.hasAccessory,
-        RealRule.metalPartLie,
+        RealRule.metalBodyParts,//7
+        RealRule.tattooLie,//8
+        RealRule.hasAccessory,//9
+        RealRule.explainTheyHaveMissingPart,//10
+        //war bad
+        RealRule.metalPartLie,//11
 
     };
     [HideInInspector]
@@ -278,7 +280,6 @@ public class GameManager : Singleton<GameManager>
         }
 
         EventPool.Trigger("updateMoney");
-        GameManager.Instance.nextCharacter();
     }
 
     void resetCharacter()
