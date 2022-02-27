@@ -1,151 +1,79 @@
 fileFormatVersion: 2
-guid: 0972acd7374183e4886dcf9b8ae1b71c
+guid: f768c36f566e6aa4ca44750a36473d7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8327562859071755678
-    second: leg1_0
+      213: -6212305173154687255
+    second: leg_0
   - first:
-      213: -5118290338728070121
-    second: leg1_1
+      213: 2537071958837249688
+    second: leg_1
   - first:
-      213: 7635675663853498049
-    second: leg1_2
+      213: 5169672686700776339
+    second: leg_2
   - first:
-      213: 2343487197259548283
-    second: leg1_3
+      213: 7034051070466177562
+    second: leg_3
   - first:
-      213: -4957512671301283901
-    second: leg1_4
+      213: 8022556762117500270
+    second: leg_4
   - first:
-      213: -1017971459829548496
-    second: leg1_5
+      213: 7069677758719604815
+    second: leg_5
   - first:
-      213: 4655281155172078094
-    second: leg1_6
+      213: 1332687615501324429
+    second: leg_6
   - first:
-      213: -6345496273600800521
-    second: leg1_7
+      213: -3278469122837358567
+    second: leg_7
   - first:
-      213: 8179439082729315935
-    second: leg1_8
+      213: -2571962366431800936
+    second: leg_8
   - first:
-      213: -929431536467259760
-    second: leg1_9
+      213: -4521956232262690017
+    second: leg_9
   - first:
-      213: 4405754373288300735
-    second: leg1_10
+      213: 856379846433789393
+    second: leg_10
   - first:
-      213: -4525830139861367611
-    second: leg1_11
+      213: 3564033824836238780
+    second: leg_11
   - first:
-      213: -908394775078091565
-    second: leg1_12
+      213: 938478409447290327
+    second: leg_12
   - first:
-      213: -3262481050440069888
-    second: leg1_13
+      213: 7929513087524371215
+    second: leg_13
   - first:
-      213: 734991887748769103
-    second: leg1_14
+      213: -4426058906895592548
+    second: leg_14
   - first:
-      213: -5326239956799880430
-    second: leg1_15
+      213: 165110092355482376
+    second: leg_15
   - first:
-      213: -1511847001547908222
-    second: leg1_16
+      213: -1689179050477049351
+    second: leg_16
   - first:
-      213: 4312663087526731318
-    second: leg1_17
+      213: -4951993811098775254
+    second: leg_17
   - first:
-      213: -5573410359522073224
-    second: leg1_18
+      213: -6750236966115401346
+    second: leg_18
   - first:
-      213: -2973306282426708649
-    second: leg1_19
+      213: -5687635765095857620
+    second: leg_19
   - first:
-      213: 1114409925397806311
-    second: leg1_20
+      213: 1348214968382387485
+    second: leg_20
   - first:
-      213: -3666144359600930873
-    second: leg1_21
+      213: 6194259573834081365
+    second: leg_21
   - first:
-      213: 5135525026109197283
-    second: leg1_22
+      213: -4616656900071094463
+    second: leg_22
   - first:
-      213: 3808799460138121795
-    second: leg1_23
-  - first:
-      213: 1730826577450134818
-    second: Leg_0
-  - first:
-      213: 5081782768019677891
-    second: Leg_1
-  - first:
-      213: 2678899424142612303
-    second: Leg_2
-  - first:
-      213: -4532075903480463336
-    second: Leg_3
-  - first:
-      213: 8847026829738954555
-    second: Leg_4
-  - first:
-      213: 1055190032371892847
-    second: Leg_5
-  - first:
-      213: -7698580545462438911
-    second: Leg_6
-  - first:
-      213: -8004792162936485218
-    second: Leg_7
-  - first:
-      213: 5091003011243905104
-    second: Leg_8
-  - first:
-      213: 516666781445093355
-    second: Leg_9
-  - first:
-      213: 5656097428228514255
-    second: Leg_10
-  - first:
-      213: -2367616616403469560
-    second: Leg_11
-  - first:
-      213: 2765915495825660775
-    second: Leg_12
-  - first:
-      213: -955730091265285150
-    second: Leg_13
-  - first:
-      213: 3884590551970280840
-    second: Leg_14
-  - first:
-      213: 916655123978345046
-    second: Leg_15
-  - first:
-      213: -111816465994169329
-    second: Leg_16
-  - first:
-      213: -2595360441149885284
-    second: Leg_17
-  - first:
-      213: 352600319025092826
-    second: Leg_18
-  - first:
-      213: 5265109397714785788
-    second: Leg_19
-  - first:
-      213: 8219319289562115119
-    second: Leg_20
-  - first:
-      213: -3021121098915162676
-    second: Leg_21
-  - first:
-      213: 3100841145065083248
-    second: Leg_22
-  - first:
-      213: 1994457730647857242
-    second: Leg_23
+      213: -5529087098164625319
+    second: leg_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -181,7 +109,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -219,35 +147,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leg_0
+      name: leg_0
       rect:
         serializedVersion: 2
         x: 0
@@ -261,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22d68b41a91250810800000000000000
-      internalID: 1730826577450134818
+      spriteID: 9e61bc5fb5579c9a0800000000000000
+      internalID: -6212305173154687255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_1
+      name: leg_1
       rect:
         serializedVersion: 2
         x: 48
@@ -282,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c2a389c08e168640800000000000000
-      internalID: 5081782768019677891
+      spriteID: 896491c218d753320800000000000000
+      internalID: 2537071958837249688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_2
+      name: leg_2
       rect:
         serializedVersion: 2
         x: 96
@@ -303,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f47d40535dc5d2520800000000000000
-      internalID: 2678899424142612303
+      spriteID: 39bc6df1bed5eb740800000000000000
+      internalID: 5169672686700776339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_3
+      name: leg_3
       rect:
         serializedVersion: 2
         x: 144
@@ -324,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81080fd4af4da11c0800000000000000
-      internalID: -4532075903480463336
+      spriteID: a1ab71b3e28fd9160800000000000000
+      internalID: 7034051070466177562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_4
+      name: leg_4
       rect:
         serializedVersion: 2
         x: 192
@@ -345,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3fc0f03704f6ca70800000000000000
-      internalID: 8847026829738954555
+      spriteID: e6deb6caed8d55f60800000000000000
+      internalID: 8022556762117500270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_5
+      name: leg_5
       rect:
         serializedVersion: 2
         x: 240
@@ -366,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f624f0a6eb9c4ae00800000000000000
-      internalID: 1055190032371892847
+      spriteID: f4836fcf67a8c1260800000000000000
+      internalID: 7069677758719604815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_6
+      name: leg_6
       rect:
         serializedVersion: 2
         x: 288
@@ -387,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1047af068c5292590800000000000000
-      internalID: -7698580545462438911
+      spriteID: d80d48e4358ae7210800000000000000
+      internalID: 1332687615501324429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_7
+      name: leg_7
       rect:
         serializedVersion: 2
         x: 336
@@ -408,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9a075360f349e090800000000000000
-      internalID: -8004792162936485218
+      spriteID: 918513ee3b98082d0800000000000000
+      internalID: -3278469122837358567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_8
+      name: leg_8
       rect:
         serializedVersion: 2
         x: 384
@@ -429,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05013a3f340e6a640800000000000000
-      internalID: 5091003011243905104
+      spriteID: 891d825cadd8e4cd0800000000000000
+      internalID: -2571962366431800936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_9
+      name: leg_9
       rect:
         serializedVersion: 2
         x: 432
@@ -450,14 +354,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be7774743b19b2700800000000000000
-      internalID: 516666781445093355
+      spriteID: f1b5e1ed3c8ce31c0800000000000000
+      internalID: -4521956232262690017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_10
+      name: leg_10
       rect:
         serializedVersion: 2
         x: 480
@@ -471,14 +375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc1af88c4ae7e7e40800000000000000
-      internalID: 5656097428228514255
+      spriteID: 1d55d7bdee872eb00800000000000000
+      internalID: 856379846433789393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_11
+      name: leg_11
       rect:
         serializedVersion: 2
         x: 528
@@ -492,14 +396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80b75f64b39842fd0800000000000000
-      internalID: -2367616616403469560
+      spriteID: cbd37d071edf57130800000000000000
+      internalID: 3564033824836238780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_12
+      name: leg_12
       rect:
         serializedVersion: 2
         x: 576
@@ -513,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76bdf6f2d71826620800000000000000
-      internalID: 2765915495825660775
+      spriteID: 7d5ba702425260d00800000000000000
+      internalID: 938478409447290327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_13
+      name: leg_13
       rect:
         serializedVersion: 2
         x: 624
@@ -534,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e32bf0bb809cb2f0800000000000000
-      internalID: -955730091265285150
+      spriteID: f0b73b7042a4b0e60800000000000000
+      internalID: 7929513087524371215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_14
+      name: leg_14
       rect:
         serializedVersion: 2
         x: 672
@@ -555,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 885f60c8686d8e530800000000000000
-      internalID: 3884590551970280840
+      spriteID: c93d88bdfda7392c0800000000000000
+      internalID: -4426058906895592548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_15
+      name: leg_15
       rect:
         serializedVersion: 2
         x: 720
@@ -576,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65a55468afc98bc00800000000000000
-      internalID: 916655123978345046
+      spriteID: 8033ea311c69a4200800000000000000
+      internalID: 165110092355482376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_16
+      name: leg_16
       rect:
         serializedVersion: 2
         x: 768
@@ -597,14 +501,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f04c060448fb27ef0800000000000000
-      internalID: -111816465994169329
+      spriteID: 9f9a84e6a94de88e0800000000000000
+      internalID: -1689179050477049351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_17
+      name: leg_17
       rect:
         serializedVersion: 2
         x: 816
@@ -618,14 +522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c94f829fd6d6bfbd0800000000000000
-      internalID: -2595360441149885284
+      spriteID: a2156879ddbf64bb0800000000000000
+      internalID: -4951993811098775254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_18
+      name: leg_18
       rect:
         serializedVersion: 2
         x: 864
@@ -639,14 +543,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad81e2b3f10b4e400800000000000000
-      internalID: 352600319025092826
+      spriteID: e712bfc5e375252a0800000000000000
+      internalID: -6750236966115401346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_19
+      name: leg_19
       rect:
         serializedVersion: 2
         x: 912
@@ -660,14 +564,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf55c5af91d611940800000000000000
-      internalID: 5265109397714785788
+      spriteID: c2287a1f7657111b0800000000000000
+      internalID: -5687635765095857620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_20
+      name: leg_20
       rect:
         serializedVersion: 2
         x: 960
@@ -681,14 +585,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2cadd59853e01270800000000000000
-      internalID: 8219319289562115119
+      spriteID: d15fb4fde52d5b210800000000000000
+      internalID: 1348214968382387485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_21
+      name: leg_21
       rect:
         serializedVersion: 2
         x: 1008
@@ -702,14 +606,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc559bbfd52d216d0800000000000000
-      internalID: -3021121098915162676
+      spriteID: 55461f8834e66f550800000000000000
+      internalID: 6194259573834081365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_22
+      name: leg_22
       rect:
         serializedVersion: 2
         x: 1056
@@ -723,14 +627,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 071158ca796680b20800000000000000
-      internalID: 3100841145065083248
+      spriteID: 147086d62075eefb0800000000000000
+      internalID: -4616656900071094463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_23
+      name: leg_23
       rect:
         serializedVersion: 2
         x: 1104
@@ -744,8 +648,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a581cca2dbcbdab10800000000000000
-      internalID: 1994457730647857242
+      spriteID: 950c3bd149cb443b0800000000000000
+      internalID: -5529087098164625319
       vertices: []
       indices: 
       edges: []

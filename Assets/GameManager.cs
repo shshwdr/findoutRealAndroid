@@ -77,14 +77,14 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     public bool isLevelStarted;
     RealRule[] levelToRule = new RealRule[] {
-        RealRule.sayImRobot,//0
-        RealRule.circleOnHead,//1
+        //RealRule.sayImRobot,//0
+        //RealRule.circleOnHead,//1
         RealRule.squareOnBody,//2
         //war almost
-        RealRule.hasClothes,//3
-        RealRule.explainTheyHaveTattoo,//4
-        RealRule.androidLie,//5
-        RealRule.canReport,//6
+        //RealRule.hasClothes,//3
+        //RealRule.explainTheyHaveTattoo,//4
+        //RealRule.androidLie,//5
+        //RealRule.canReport,//6
         //war start
         RealRule.metalBodyParts,//7
         RealRule.tattooLie,//8
@@ -200,9 +200,12 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {
+
+        Resources.LoadAsync<Sprite>("");
+
+
         currentRules.Add(levelToRule[0]);
         // EventPool.Trigger("levelStart");
-        pauseGameBetweenLevel();
         EventPool.OptIn("dialogEnd",finishDialogue);
         shopController = GameObject.FindObjectOfType<ShopController>(true).gameObject;
 
@@ -226,6 +229,13 @@ public class GameManager : Singleton<GameManager>
 
         Time.timeScale = 0;
         generateCurrentLevelPattern();
+        StartCoroutine(startGame());
+    }
+
+    IEnumerator startGame()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        pauseGameBetweenLevel();
     }
 
     void generateCurrentLevelPattern()
@@ -299,8 +309,11 @@ public class GameManager : Singleton<GameManager>
             generateCurrentLevelPattern();
 
         }
-        resetCharacter();
-        EventPool.Trigger("nextCharacter");
+        else
+        {
+            resetCharacter();
+            EventPool.Trigger("nextCharacter");
+        }
     }
 
     // Update is called once per frame

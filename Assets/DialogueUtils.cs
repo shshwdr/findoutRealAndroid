@@ -27,13 +27,21 @@ public class DialogueUtils : Singleton<DialogueUtils>
     public void startConversation()
     {
         isInDialogue = true;
+        //bug.Log(PixelCrushers.DialogueSystem.DialogueManager.StartConversation
+       //tartCoroutine(test());
+    }
+
+    IEnumerator test()
+    {
+        yield return new WaitForSeconds(0.01f);
+       // Debug.Log(PixelCrushers.DialogueSystem.DialogueManager.currentConversant);
     }
     public void started()
     {
-
     }
     public void endConversation()
     {
+        Debug.Log(PixelCrushers.DialogueSystem.DialogueManager.currentConversant);
         isInDialogue = false;
         EventPool.Trigger("dialogEnd");
     }

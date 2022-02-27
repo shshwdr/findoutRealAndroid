@@ -7,6 +7,9 @@ using DG.Tweening;
 
 public class SetCharacter : MonoBehaviour
 {
+    public bool speical;
+
+
     public Transform startTrans;
     public Transform middleTrans;
     public Transform endTrans;
@@ -142,6 +145,7 @@ public class SetCharacter : MonoBehaviour
     bool shouldResetLatestRule = false;
 
     SpriteAnimator[] allAnimators;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -207,11 +211,12 @@ public class SetCharacter : MonoBehaviour
 
             actualName = actualName.Substring(slashPos);
         }
-
+        //if(CheatManager.shouldLog)
         return actualName;
     }
     public void resetBase()
     {
+
         resetItem(bodyPath,body);
     }
 
@@ -661,66 +666,101 @@ public class SetCharacter : MonoBehaviour
    
     public void resetCharacter()
     {
-        rulesSelection.SetActive(false);
-        explain = "";
-        accounceHuman = false;
-        isMute = false;
-        wouldComplainClothes = true;
-        if (CheatManager.shouldLog)
+        if (speical)
         {
-            Debug.Log("start reset");
-        }
-
-
-
-        decideIfReal();
-        isLying = false;
-        if (CheatManager.shouldLog)
-        {
-            Debug.Log($" it is real: {isReal}");
-        }
-        setWords();
-        resetBase();
-        resetUnreal();
-        resetOutfit();
-        resetHair();
-        resetAccessory();
-
-        if(explain == "")
-        {
-            if (isReal)
+            var outfitName = name + "/" + "body";
+            if (Resources.Load(outfitName))
             {
-                explain = explainNormalHuman;
+
+                body.PlayerSpriteSheets = Resources.LoadAll<Sprite>(outfitName);
             }
-            else
+            outfitName = name + "/" + "outfit";
+            if (Resources.Load(outfitName))
             {
-                Debug.LogWarning("why no explain?");
+
+                outfit.gameObject.SetActive(true);
+                outfit.PlayerSpriteSheets = Resources.LoadAll<Sprite>(outfitName);
             }
-        }
-        if (isLying)
-        {
-            explain = explainLie + explain;
-        }
+            outfitName = name + "/" + "hair";
+            if (Resources.Load(outfitName))
+            {
 
-        if (shouldResetLatestRule)
-        {
-            GameManager.Instance.clearLatestRule();
-            shouldResetLatestRule = false;
-        }
+                hair.gameObject.SetActive(true);
+                hair.PlayerSpriteSheets = Resources.LoadAll<Sprite>(outfitName);
+            }
+            outfitName = name + "/" + "head";
+            if (Resources.Load(outfitName))
+            {
+                accessories[0].gameObject.SetActive(true);
+                accessories[0].PlayerSpriteSheets = Resources.LoadAll<Sprite>(outfitName);
+            }
 
-        StartCoroutine(forceUpdateAnimate());
+            StartCoroutine(forceUpdateAnimateSpecial());
+        }
+        else
+        {
+            rulesSelection.SetActive(false);
+            explain = "";
+            accounceHuman = false;
+            isMute = false;
+            wouldComplainClothes = true;
+            if (CheatManager.shouldLog)
+            {
+                Debug.Log("start reset");
+            }
+
+
+
+            decideIfReal();
+            isLying = false;
+            if (CheatManager.shouldLog)
+            {
+                Debug.Log($" it is real: {isReal}");
+            }
+            setWords();
+            resetBase();
+            resetUnreal();
+            resetOutfit();
+            resetHair();
+            resetAccessory();
+
+            if (explain == "")
+            {
+                if (isReal)
+                {
+                    explain = explainNormalHuman;
+                }
+                else
+                {
+                    Debug.LogWarning("why no explain?");
+                }
+            }
+            if (isLying)
+            {
+                explain = explainLie + explain;
+            }
+
+            if (shouldResetLatestRule)
+            {
+                GameManager.Instance.clearLatestRule();
+                shouldResetLatestRule = false;
+            }
+
+            StartCoroutine(forceUpdateAnimate());
+        }
+        
     }
 
-    IEnumerator forceUpdateAnimate()
+    IEnumerator forceUpdateAnimateSpecial()
     {
         transform.position = startTrans.position;
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSecondsRealtime(0.01f);
         foreach (SpriteAnimator anim in allAnimators)
         {
             anim.resetPosition("right");
         }
-        transform.DOMoveX(middleTrans.position.x, moveTime);
-        yield return new WaitForSeconds(moveTime);
+        transform.DOLocalMoveX(middleTrans.position.x, moveTime).SetUpdate(true);
+        yield return new WaitForSecondsRealtime(moveTime);
         foreach (SpriteAnimator anim2 in allAnimators)
         {
             if (anim2 == null)
@@ -729,6 +769,11 @@ public class SetCharacter : MonoBehaviour
             }
             anim2.resetPosition("down");
         }
+    }
+
+        IEnumerator forceUpdateAnimate()
+    {
+        yield return StartCoroutine( forceUpdateAnimateSpecial());
         rulesSelection.SetActive(true);
     }
 
@@ -739,8 +784,7 @@ public class SetCharacter : MonoBehaviour
         StartCoroutine(forceUpdateAnimateLeave(isReal));
 
     }
-
-    IEnumerator forceUpdateAnimateLeave(bool isReal)
+    public void forceUpdateAnimateLeaveSpecial(bool isReal = true)
     {
         foreach (SpriteAnimator anim in allAnimators)
         {
@@ -752,17 +796,21 @@ public class SetCharacter : MonoBehaviour
             if (isReal)
             {
                 anim.resetPosition("left");
-                transform.DOMoveX(startTrans.position.x, moveTime);
+                transform.DOLocalMoveX(startTrans.position.x, moveTime).SetUpdate(true);
 
             }
             else
             {
 
                 anim.resetPosition("up");
-                transform.DOMoveY(endUpTrans.position.y, moveTime);
+                transform.DOLocalMoveY(endUpTrans.position.y, moveTime).SetUpdate(true);
             }
         }
-        yield return new WaitForSeconds(moveTime);
+    }
+        IEnumerator forceUpdateAnimateLeave(bool isReal)
+    {
+        forceUpdateAnimateLeaveSpecial(isReal);
+        yield return new WaitForSecondsRealtime(moveTime);
 
         GameManager.Instance.nextCharacter();
     }
