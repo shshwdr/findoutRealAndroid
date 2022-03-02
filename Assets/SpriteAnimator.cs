@@ -106,5 +106,9 @@ public class SpriteAnimator : MonoBehaviour
     {
         Debug.Log($"on mouse down {name}");
         gameObject.SetActive(false);
+        if(name == "outfit" && GetComponentInParent<SetCharacter>())
+        {
+            GetComponentInParent<SetCharacter>().takeClothesOff();
+        }
     }
 }

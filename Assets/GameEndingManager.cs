@@ -19,12 +19,39 @@ public class GameEndingManager : Singleton<GameEndingManager>
         {
             if (GameManager.Instance.currentGameStage >= 3)
             {
-                label.text = "You died from not getting enough food and rest. \nHuman wins the war, you were posthumously named a martyr.";
+                label.text = "You died from not getting enough food and rest. \nHuman won the war, you were posthumously named a martyr.";
             }
             else
             {
-                label.text = "You died from not getting enough food and rest. \nAndroid wins the war, you were posthumously named a traitor.";
+                label.text = "You died from not getting enough food and rest. \nAndroid won the war, you were posthumously named a traitor.";
             }
+        }
+        if (GameManager.Instance.atMaxLevel())
+        {
+            if(GameManager.Instance.makeRobotToHuman + GameManager.Instance.makeRobotToHuman <= 2)
+            {
+
+                label.text = "Human won the war, you did perfect in the war.\nPeople admire you then think you are too perfect to be true.\nThey did a check on you and find out you are an android. You are Dismantled.";
+            }
+            else
+            {
+
+                if (GameManager.Instance.makeRobotToHuman > GameManager.Instance.makeRobotToHuman)
+                {
+
+                    label.text = "You are caught and killed because you let too many android leave as human. \nAndroid won the war and you were posthumously named a martyr.";
+                }
+                else
+                {
+
+                    label.text = "Human won the war. \nYou treat too many human as android and they were angry after the war.\nYou die alone and lonely.";
+                }
+            }
+        }
+        else
+        {
+
+            label.text = "The war is endless..";
         }
     }
 

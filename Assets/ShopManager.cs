@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using Pool;
 using Sinbad;
 using System.Collections;
@@ -11,7 +12,7 @@ public class Item {
     public int onlyHasOne;
     public int consumable;
     public bool canBuy { get { return CheatManager.Instance.hasUnlimitResource ||  GameManager.Instance.money >= cost; } }
-    public bool wouldSell { get { return onlyHasOne == 0 || ShopManager.Instance.itemInventory[name] < 1; } }
+    public bool wouldSell { get { return onlyHasOne == 0 || !ShopManager.Instance.itemInventory.ContainsKey(name) || ShopManager.Instance.itemInventory[name] < 1; } }
     public int cost { get {   return costs[GameManager.Instance.currentGameStage]; } }
 }
 
@@ -42,7 +43,7 @@ public class ShopManager : Singleton<ShopManager>
     }
     public bool shouldAssist()
     {
-        if(ShopManager.Instance.itemInventory.ContainsKey("Assist") && !assisted)
+        if(ShopManager.Instance.itemInventory.ContainsKey("Assist") && ShopManager.Instance.itemInventory["Assist"]>0 && !assisted)
         {
             assisted = true;
             return true;
@@ -51,18 +52,28 @@ public class ShopManager : Singleton<ShopManager>
     }
     public void updateHealth()
     {
+        var decrease = 0;
         if (!ate)
         {
             //popup for health reduce
             health -= 20;
+            decrease += 20;
         }
         if (!slept)
         {
             health -= 10;
+            decrease +=  10;
+        }
+        if (decrease > 0)
+        {
+            DialogueManager.ShowAlert($"You health decrease {decrease}");
         }
         if (itemInventory.ContainsKey("Succulents"))
         {
-
+            //if (decrease > 0)
+            //{
+            //    DialogueManager.ShowAlert($"You health increase 5");
+            //}
             health +=5;
         }
 
@@ -91,6 +102,10 @@ public class ShopManager : Singleton<ShopManager>
                 slept = true;
                 break;
             default:
+                if (!itemInventory.ContainsKey(name))
+                {
+                    itemInventory[name] = 0;
+                }
                 itemInventory[name] +=1;
                 break;
         }
@@ -107,11 +122,12 @@ public class ShopManager : Singleton<ShopManager>
             {
                 case "emergency":
                     health += 15;
+                    itemInventory[name] -= 1;
                     break;
             }
-            itemInventory[name] -= 1;
         }
 
+        health = Mathf.Min(100, health);
         EventPool.Trigger("updateHealth");
     }
 }

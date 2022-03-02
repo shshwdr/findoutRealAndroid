@@ -67,7 +67,7 @@ public class UIController : MonoBehaviour
     }
     public void showCurrentRuleForLevel()
     {
-        if (GameManager.Instance.atMaxLevel())
+        if (gameManager.currentRule == RealRule.none)
         {
 
             GameManager.Instance.startLevel();
@@ -99,7 +99,7 @@ public class UIController : MonoBehaviour
         }
         bool isCorrect = character.isReal == isReal;
 
-        if (ShopManager.Instance.shouldAssist())
+        if (!isCorrect && ShopManager.Instance.shouldAssist())
         {
             var go2 = Instantiate(Resources.Load<GameObject>("popup"), popupTransform.position, Quaternion.identity);
             go2.GetComponent<PopupController>().initWarn();
@@ -124,7 +124,7 @@ public class UIController : MonoBehaviour
         var go = Instantiate(Resources.Load<GameObject>("popup"), popupTransform.position, Quaternion.identity);
         bool isCorrect = character.isLying == true;
 
-        go.GetComponent<PopupController>().init(isCorrect, character.explain);
+        go.GetComponent<PopupController>().initLie(isCorrect, character.explain);
         GameManager.Instance.answer(isCorrect, CharacterType.android,true);
         character.characterLeave(false);
     }

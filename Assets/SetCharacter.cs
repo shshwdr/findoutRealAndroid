@@ -43,6 +43,7 @@ public class SetCharacter : MonoBehaviour
     const string explainLie = "It lies! ";
     const string explainLieTatto = "It does not have tattoo on {0}!";
     const string explainLieMetalPart = "It does not have metal {0}!";
+    const string explainNotComplain = "It does not complain when take off clothes!";
 
 
     const string explainNormalHuman = "He looks a perfect human!";
@@ -50,7 +51,6 @@ public class SetCharacter : MonoBehaviour
     const string explainExplainedMissBodyPart = "He explained the metal {0}!";
 
 
-    string characterPath = "newCharacter/";
     const string bodyPath = "newCharacter/Bodies";
     const string circlePath = "newCharacter/circle";
     const string squarePath = "newCharacter/square";
@@ -82,9 +82,16 @@ public class SetCharacter : MonoBehaviour
             "I made jokes about fight with androids but now I'm so afraid.",
             "I think human will win.. but with what price?",
             "I live at home without electric for days. It's horrible.",
-            "Do we win?",
+            "Will we win?",
+        },new string[]
+        {
+            "When would the war ends...",
+            "I want to get back to my normal life...",
+            "I don't care about androids or human, why can't we live together?",
+            "Kill them all!",
+            "I lost everything. Kill me if you want.",
             "Androids killed my family. I hate them.",
-        },
+        }
     };
 
     string[] robotWords = new string[]
@@ -222,6 +229,24 @@ public class SetCharacter : MonoBehaviour
 
     public void updateWordsOfExplain(bool isTattoo, string path)
     {
+        if (path.Contains(','))
+        {
+            var pointPos = path.LastIndexOf(',');
+            if (pointPos != -1)
+            {
+
+                path = path.Substring(pointPos);
+            }
+        }
+        if (path.Contains('/'))
+        {
+            var pointPos = path.LastIndexOf('/');
+            if (pointPos != -1)
+            {
+
+                path = path.Substring(pointPos);
+            }
+        }
         string generalWord   = "";
         if (isTattoo)
         {
@@ -313,7 +338,7 @@ public class SetCharacter : MonoBehaviour
 
     IEnumerator changeclothesWordsBack()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         clothesLabel.text = "";
     }
     public void setWords()
@@ -331,6 +356,11 @@ public class SetCharacter : MonoBehaviour
             }
             else
             {
+                if (behaviorRobot)
+                {
+                    updateWords(Utils.randomFromList(generalw));
+                    return;
+                }
                 if(GameManager.Instance.latestRule == RealRule.circleOnHead ||
                    GameManager.Instance.latestRule == RealRule.squareOnBody ||
                   GameManager.Instance.latestRule == RealRule.metalBodyParts)
@@ -419,17 +449,24 @@ public class SetCharacter : MonoBehaviour
                     string path = pickUnrealPath(GameManager.Instance.currentRules.Contains(RealRule.explainTheyHaveMissingPart));
                     var itemName = resetItem(path, unreals[0]);
 
+                    var finalName = itemName;
+                    var pointPos = finalName.LastIndexOf(',');
+                    if (pointPos != -1)
+                    {
+
+                        finalName = finalName.Substring(pointPos);
+                    }
 
                     switch (pickedPath)
                     {
                         case circlePath:
                         case squarePath:
-                            explain = string.Format( explainExplainedTattoo,itemName);
-                            updateWordsOfExplain(true, itemName);
+                            explain = string.Format( explainExplainedTattoo, finalName);
+                            updateWordsOfExplain(true, finalName);
                             break;
                         case metalPartPath:
-                            explain = string.Format(explainExplainedMissBodyPart, itemName);
-                            updateWordsOfExplain(false, itemName);
+                            explain = string.Format(explainExplainedMissBodyPart, finalName);
+                            updateWordsOfExplain(false, finalName);
                             break;
 
                     }
@@ -443,6 +480,14 @@ public class SetCharacter : MonoBehaviour
         }
         else//not real
         {
+            if (behaviorRobot)
+            {
+                foreach (var unreal in unreals)
+                {
+                    unreal.gameObject.SetActive(false);
+                }
+                return;
+            }
             List<string> unrealTypes = new List<string>();
             List<string> unrealFinalNames = new List<string>();
             var pickedPath = pickUnrealPath();
@@ -534,7 +579,7 @@ public class SetCharacter : MonoBehaviour
                         if (pointPos != -1)
                         {
 
-                            finalPos = pos.Substring(pointPos);
+                            finalPos = finalPos.Substring(pointPos);
                         }
                     }
                 }
@@ -548,8 +593,8 @@ public class SetCharacter : MonoBehaviour
                     //lie about tattoo
                     isLying = true;
 
-                    updateWordsOfExplain(false, finalPos);
-                    explain = explainLieTatto;
+                    updateWordsOfExplain(true, finalPos);
+                    explain = string.Format(explainLieTatto, finalPos);
                 }
             }
 
@@ -584,7 +629,7 @@ public class SetCharacter : MonoBehaviour
                         if (pointPos != -1)
                         {
 
-                            finalPos = pos.Substring(pointPos);
+                            finalPos = finalPos.Substring(pointPos);
                         }
                     }
                 }
@@ -599,7 +644,7 @@ public class SetCharacter : MonoBehaviour
                     isLying = true;
 
                     updateWordsOfExplain(false, finalPos);
-                    explain = explainLieTatto;
+                    explain = string.Format(explainLieMetalPart, finalPos);
                 }
             }
         }
@@ -668,6 +713,7 @@ public class SetCharacter : MonoBehaviour
     {
         if (speical)
         {
+            body.gameObject.SetActive(true);
             var outfitName = name + "/" + "body";
             if (Resources.Load(outfitName))
             {
@@ -709,13 +755,38 @@ public class SetCharacter : MonoBehaviour
                 Debug.Log("start reset");
             }
 
-
-
             decideIfReal();
             isLying = false;
             if (CheatManager.shouldLog)
             {
                 Debug.Log($" it is real: {isReal}");
+            }
+            if (isReal)
+            {
+                wouldComplainClothes = true;
+            }
+            else
+            {
+                if (GameManager.Instance.currentRules.Contains(RealRule.talkWhenTakeOff))
+                {
+                    var rand = Random.Range(0, 10) >= 1;
+                    wouldComplainClothes = rand;
+
+                    if (GameManager.Instance.latestRule == RealRule.talkWhenTakeOff)
+                    {
+                        wouldComplainClothes = false;
+                        GameManager.Instance.latestRule = RealRule.none;
+                    }
+                    behaviorRobot = !wouldComplainClothes;
+                    if (!wouldComplainClothes)
+                    {
+                        explain = explainNotComplain;
+                    }
+                }
+                else
+                {
+                    wouldComplainClothes = true;
+                }
             }
             setWords();
             resetBase();
@@ -765,7 +836,7 @@ public class SetCharacter : MonoBehaviour
         {
             if (anim2 == null)
             {
-                rulesSelection = rulesSelection;
+                //rulesSelection = rulesSelection;
             }
             anim2.resetPosition("down");
         }
@@ -784,13 +855,20 @@ public class SetCharacter : MonoBehaviour
         StartCoroutine(forceUpdateAnimateLeave(isReal));
 
     }
+
+    public void fu()
+    {
+        forceUpdateAnimateLeaveSpecial(true);
+    }
     public void forceUpdateAnimateLeaveSpecial(bool isReal = true)
     {
+
+        words.gameObject.SetActive(false);
         foreach (SpriteAnimator anim in allAnimators)
         {
             if (anim == null)
             {
-                rulesSelection = rulesSelection;
+               // rulesSelection = rulesSelection;
             }
 
             if (isReal)
@@ -807,10 +885,16 @@ public class SetCharacter : MonoBehaviour
             }
         }
     }
+
         IEnumerator forceUpdateAnimateLeave(bool isReal)
     {
         forceUpdateAnimateLeaveSpecial(isReal);
         yield return new WaitForSecondsRealtime(moveTime);
+        foreach (SpriteAnimator anim in allAnimators)
+        {
+            anim.resetPosition("up");
+        }
+        yield return new WaitForSecondsRealtime(0.01f);
 
         GameManager.Instance.nextCharacter();
     }

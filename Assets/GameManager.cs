@@ -2,7 +2,9 @@ using Pool;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PixelCrushers.DialogueSystem;
+using System.Collections;
+using System.Collections.Generic;
 public enum CharacterType { android, human }
 public enum RealRule
 {
@@ -25,9 +27,8 @@ public enum RealRule
     metalPartLie,
 
 
-    none,
-    rotateWrongDirection,
     talkWhenTakeOff,
+    none,
 
 }
 public class GameManager : Singleton<GameManager>
@@ -61,6 +62,7 @@ public class GameManager : Singleton<GameManager>
     "You can report if an android is lying and get more money",
     "Android would lie about tattoo",
     "Android would lie about metal body parts",
+    "Android would not complain when take off clothes",
     "None",
     };
 
@@ -76,22 +78,28 @@ public class GameManager : Singleton<GameManager>
     public int level;
     [HideInInspector]
     public bool isLevelStarted;
+
+    public RealRule currentRule { get { return levelToRule[level]; } }
+
     RealRule[] levelToRule = new RealRule[] {
-        //RealRule.sayImRobot,//0
-        //RealRule.circleOnHead,//1
+        RealRule.sayImRobot,//0
+        RealRule.circleOnHead,//1
         RealRule.squareOnBody,//2
         //war almost
-        //RealRule.hasClothes,//3
-        //RealRule.explainTheyHaveTattoo,//4
-        //RealRule.androidLie,//5
-        //RealRule.canReport,//6
+        RealRule.hasClothes,//3
+        RealRule.explainTheyHaveTattoo,//4
+        RealRule.androidLie,//5
         //war start
-        RealRule.metalBodyParts,//7
-        RealRule.tattooLie,//8
-        RealRule.hasAccessory,//9
-        RealRule.explainTheyHaveMissingPart,//10
+        RealRule.canReport,//6
+        RealRule.talkWhenTakeOff,//7
+        RealRule.metalBodyParts,//8
+        RealRule.tattooLie,//9
         //war bad
-        RealRule.metalPartLie,//11
+        RealRule.hasAccessory,//10
+        RealRule.explainTheyHaveMissingPart,//11
+        RealRule.metalPartLie,//12
+        
+        RealRule.none,//13
 
     };
     [HideInInspector]
@@ -100,6 +108,9 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     public int characterCount = 0;
     public int upgradeCount = 1;
+
+    public int makeHumanToRobot;
+    public int makeRobotToHuman;
     public bool atMaxLevel()
     {
         return level >= levelToRule.Length;
@@ -112,7 +123,9 @@ public class GameManager : Singleton<GameManager>
         level++;
         if (atMaxLevel())
         {
-            latestRule = RealRule.none;
+
+            GameEndingManager.Instance.GameOver();
+            //latestRule = RealRule.none;
             return;
         }
         latestRule = levelToRule[level];
@@ -148,10 +161,14 @@ public class GameManager : Singleton<GameManager>
 
     public void closeShop()
     {
-        //show dialog
-        pauseGameBetweenLevel();
-
         ShopManager.Instance.updateHealth();
+        if (ShopManager.Instance.health > 0)
+        {
+
+            //show dialog
+            pauseGameBetweenLevel();
+        }
+
     }
 
     void pauseGameBetweenLevel()
@@ -201,7 +218,6 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
 
-        Resources.LoadAsync<Sprite>("");
 
 
         currentRules.Add(levelToRule[0]);
@@ -230,6 +246,13 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 0;
         generateCurrentLevelPattern();
         StartCoroutine(startGame());
+        StartCoroutine(well());
+    }
+
+    IEnumerator well()
+    {
+        yield return null;
+        //Resources.LoadAsync<Sprite>("");
     }
 
     IEnumerator startGame()
@@ -270,7 +293,10 @@ public class GameManager : Singleton<GameManager>
             }
             else
             {
-                money -= 30;
+                money -= 15;
+                makeHumanToRobot++;
+
+                DialogueManager.ShowAlert("Lost 15 coins for mistake");
             }
         }
         else
@@ -286,6 +312,20 @@ public class GameManager : Singleton<GameManager>
                 {
                     money += 10;
                 }
+            }
+            else
+            {
+                if (type == CharacterType.android)
+                {
+                    makeHumanToRobot++;
+                }
+                else
+                {
+                    makeRobotToHuman++;
+                }
+
+                money -=5 ;
+                DialogueManager.ShowAlert("Lost 5 coins for mistake");
             }
         }
 

@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 595fad5d90c5af248916cc270adf9de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameLabel: {fileID: 6350437781353134212}
   costLabel: {fileID: 6350437782240772239}
   button: {fileID: 6350437782107458582}
 --- !u!1 &6350437782107458580

@@ -22,7 +22,7 @@ public class ShopController : MonoBehaviour
         int i = 0;
         for (; i < ShopManager.Instance.itemInfoDict.Count; i++)
         {
-            var value = ShopManager.Instance.itemInfoDict.Values.ToList()[0];
+            var value = ShopManager.Instance.itemInfoDict.Values.ToList()[i];
             if (value.wouldSell)
             {
                 shopItems[i].gameObject.SetActive(true);
