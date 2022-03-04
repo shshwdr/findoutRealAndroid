@@ -246,7 +246,7 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 0;
         generateCurrentLevelPattern();
         StartCoroutine(startGame());
-        StartCoroutine(well());
+       // StartCoroutine(well());
     }
 
     IEnumerator well()

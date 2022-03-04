@@ -59,7 +59,7 @@ public class PopupController : MonoBehaviour
 
     IEnumerator dest()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(2.1f);
         Destroy(gameObject);
     }
 
